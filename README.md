@@ -1,4 +1,4 @@
-**dvader-skills** · [![npm](https://img.shields.io/badge/npm-dvader--skills-1.3.0-blue?logo=npm)](https://www.npmjs.com/package/dvader-skills) [![license](https://img.shields.io/badge/license-MIT-green)](LICENSE) [![node](https://img.shields.io/badge/node-%3E%3D16.17-brightgreen)]() [![skills](https://img.shields.io/badge/skills-18-orange)](https://github.com/Imtejakarthik/dvader/tree/main/skills) [![benchmark](https://img.shields.io/badge/benchmark-74%25%20avg-red)](benchmarks/README.md)
+**dvader-skills** · [![npm](https://img.shields.io/badge/npm-dvader--skills-1.4.0-blue?logo=npm)](https://www.npmjs.com/package/dvader-skills) [![license](https://img.shields.io/badge/license-MIT-green)](LICENSE) [![node](https://img.shields.io/badge/node-%3E%3D16.17-brightgreen)]() [![skills](https://img.shields.io/badge/skills-18-orange)](https://github.com/Imtejakarthik/dvader/tree/main/skills) [![benchmark](https://img.shields.io/badge/benchmark-74%25%20avg-red)](benchmarks/README.md)
 
 # Dvader Skills
 
@@ -120,7 +120,7 @@ Most days need the daily core:
 | [`dvader-hunt`](skills/dvader-hunt/SKILL.md) | Repro, trace, root cause, proof. |
 | [`dvader-test`](skills/dvader-test/SKILL.md) | Smallest runnable check. |
 | [`dvader-verify`](skills/dvader-verify/SKILL.md) | No `Work done` without proof. |
-| [`dvader-review`](skills/dvader-review/SKILL.md) | Findings first, file:line, severity. |
+| [`dvader-review`](skills/dvader-review/SKILL.md) | Findings first, file:line, severity. Includes thermonuclear structural review mode. |
 
 Full suite:
 

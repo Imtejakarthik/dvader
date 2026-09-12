@@ -27,6 +27,3 @@ output). The long-run skills exist largely to keep you under it.
 on the verified suite. Escalate only on a cited failure.
 
 **How do I turn it off?** Say `stop vader` or `normal mode`. Or remove entirely: `npx vader-skills remove`.
-
-**Can I read the rules myself?** Every skill is a plain `SKILL.md`. The source is on
-[GitHub](https://github.com/Imtejakarthik/vader), MIT licensed.

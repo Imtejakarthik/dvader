@@ -16,7 +16,7 @@ Eighteen skills. Use the daily core first; reach for advanced tools when the wor
 | `dvader-hunt` | Bug, failing test, wrong output | Repro, trace, root cause, proof. |
 | `dvader-test` | Change needs a check | Smallest runnable proof. |
 | `dvader-verify` | Before saying done | Run the check, then report. |
-| `dvader-review` | Before merge or PR review | Findings first, file:line, severity. Use thermonuclear mode for structural maintainability. |
+| `dvader-review` | Before merge or PR review | Findings first, file:line, severity. Use strict structural mode for maintainability. |
 
 ## Advanced Tools
 

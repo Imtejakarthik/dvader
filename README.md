@@ -10,7 +10,7 @@ Your coding agent writes status like it gets paid by the paragraph. Dvader makes
   <img src="assets/dvader-logo.png" alt="Dvader" width="220" />
 </p>
 
-[See it](#see-it) · [Install](#install) · [Numbers](#numbers) · [Skills](#skills) · [Docs](https://imtejakarthik.github.io/dvader/) · [npm](https://www.npmjs.com/package/dvader-skills) · [Issues](https://github.com/Imtejakarthik/dvader/issues) · [License](#license)
+[See it](#see-it) · [Install](#install) · [Numbers](#numbers) · [Skills](#skills) · [Contribute](#contribute) · [Docs](https://imtejakarthik.github.io/dvader/) · [npm](https://www.npmjs.com/package/dvader-skills) · [Issues](https://github.com/Imtejakarthik/dvader/issues) · [License](#license)
 
 ---
 
@@ -132,7 +132,7 @@ Most days need the daily core:
 | [`dvader-hunt`](skills/dvader-hunt/SKILL.md) | Repro, trace, root cause, proof. |
 | [`dvader-test`](skills/dvader-test/SKILL.md) | Smallest runnable check. |
 | [`dvader-verify`](skills/dvader-verify/SKILL.md) | No `Work done` without proof. |
-| [`dvader-review`](skills/dvader-review/SKILL.md) | Findings first, file:line, severity. Includes thermonuclear structural review mode. |
+| [`dvader-review`](skills/dvader-review/SKILL.md) | Findings first, file:line, severity. Includes strict structural review mode. |
 
 Full suite:
 
@@ -163,6 +163,8 @@ Full suite:
 ```bash
 npm test
 npm run bench:tokens
+npm run bench:gpt
+npm run release:check
 cd docs && npm run build
 ```
 
@@ -171,6 +173,28 @@ Package preview:
 ```bash
 npm pack --dry-run
 ```
+
+## Contribute
+
+Issues and pull requests are welcome:
+
+1. Open or pick an issue: [github.com/Imtejakarthik/dvader/issues](https://github.com/Imtejakarthik/dvader/issues).
+2. Create a feature branch from `main`.
+3. Keep skill edits short, exact, and safe. Never remove rules that preserve negation, numbers, commands, paths, exact errors, security warnings, or data-loss warnings.
+4. Update docs when behavior, installation, benchmark numbers, links, or package metadata changes.
+5. Run the checks:
+
+```bash
+npm test
+npm run bench:tokens
+npm run bench:gpt
+npm run release:check
+cd docs && npm run build
+```
+
+6. Open a PR with: problem, fix, proof, screenshots if the docs UI changed, and linked issue.
+
+Benchmark changes must be honest: keep rough and GPT-tokenizer numbers separate, do not claim billing savings, and keep the public headline conservative.
 
 ## Rules That Never Bend
 
@@ -181,4 +205,6 @@ npm pack --dry-run
 
 ## License
 
-[MIT](LICENSE) · © 2026 [gtknrg](https://github.com/gtknrg)
+Dvader Skills is released under the [MIT License](LICENSE). You can use, copy, modify, merge, publish, distribute, sublicense, and sell copies under the license terms. Keep the copyright and license notice.
+
+© 2026 [gtknrg](https://github.com/gtknrg)

@@ -1,19 +1,20 @@
 ---
 title: Dvader Skills
 description: "Darth Vader-flavored skills for coding agents: short replies, smaller diffs, proof before Work done."
+layout: home
 ---
 
 <link rel="icon" type="image/png" href="./assets/favicon-80.png">
 
 <section class="dv-hero">
   <div class="dv-hero__copy">
-    <p class="dv-kicker">18 skills · thermonuclear review · MIT</p>
+    <p class="dv-kicker">18 skills · strict review · MIT</p>
     <h1>Dvader Skills</h1>
     <p class="dv-line">Vader mind. Small words. Builder heart.</p>
     <p class="dv-sub">Short replies, smaller diffs, proof before <code>Work done</code>.</p>
     <div class="dv-actions">
-      <a href="/dvader/docs/quickstart.html">Quickstart</a>
-      <a href="/dvader/docs/skills.html">Skill Map</a>
+      <a href="./docs/quickstart.html">Quickstart</a>
+      <a href="./docs/skills.html">Skill Map</a>
       <a href="https://www.npmjs.com/package/dvader-skills">npm</a>
     </div>
   </div>
@@ -64,29 +65,52 @@ npx dvader-skills --dry-run</code></pre>
     --dv-red: #ef2b3d;
     --dv-ink: #f3f0ea;
     --dv-muted: #aaa6a0;
-    --dv-panel: #141416;
+    --dv-panel: rgba(20, 20, 22, .94);
     --dv-line: #2b2b30;
   }
+  .dv-hero,
+  .dv-hero *,
+  .dv-grid,
+  .dv-grid *,
+  .dv-band,
+  .dv-install,
+  .dv-media,
+  .dv-media * {
+    box-sizing: border-box;
+  }
+  .dv-hero,
+  .dv-grid,
+  .dv-band,
+  .dv-install,
+  .dv-media {
+    max-width: 100%;
+    min-width: 0;
+  }
   .Layout {
+    overflow-x: clip;
     background:
       linear-gradient(180deg, rgba(239,43,61,.08), transparent 38rem),
       url('./assets/hero-grid-background.png') top center / cover no-repeat fixed,
       #09090b;
   }
+  body {
+    overflow-x: hidden;
+  }
   .dv-hero {
-    min-height: 68vh;
+    min-height: calc(100vh - 8rem);
     display: grid;
     grid-template-columns: minmax(0, 1.2fr) minmax(18rem, .8fr);
     gap: 2rem;
     align-items: center;
-    padding: 5rem 0 3rem;
+    padding: 4rem 0 2rem;
   }
   .dv-kicker {
     color: var(--dv-red);
     font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-    letter-spacing: .14em;
+    letter-spacing: .08em;
     text-transform: uppercase;
     font-size: .78rem;
+    overflow-wrap: anywhere;
   }
   .dv-hero h1 {
     margin: 0;
@@ -94,6 +118,7 @@ npx dvader-skills --dry-run</code></pre>
     font-size: clamp(3.8rem, 12vw, 8rem);
     line-height: .86;
     letter-spacing: 0;
+    overflow-wrap: anywhere;
   }
   .dv-line {
     margin: 1.2rem 0 .4rem;
@@ -119,6 +144,7 @@ npx dvader-skills --dry-run</code></pre>
     padding: .8rem 1.05rem;
     text-decoration: none;
     font-weight: 700;
+    max-width: 100%;
   }
   .dv-actions a:first-child {
     background: var(--dv-red);
@@ -140,6 +166,7 @@ npx dvader-skills --dry-run</code></pre>
   .dv-install pre {
     margin: 0;
     white-space: pre-wrap;
+    overflow-x: auto;
   }
   .dv-grid {
     display: grid;
@@ -179,6 +206,7 @@ npx dvader-skills --dry-run</code></pre>
   }
   .dv-media img {
     width: 100%;
+    min-width: 0;
     border: 1px solid var(--dv-line);
     border-radius: 8px;
     background: #000;
@@ -190,7 +218,15 @@ npx dvader-skills --dry-run</code></pre>
       grid-template-columns: 1fr;
     }
     .dv-hero {
-      padding-top: 3rem;
+      min-height: auto;
+      padding-top: 2rem;
+    }
+    .dv-hero h1 {
+      font-size: clamp(3rem, 18vw, 5.5rem);
+    }
+    .dv-actions a {
+      width: 100%;
+      text-align: center;
     }
   }
 </style>

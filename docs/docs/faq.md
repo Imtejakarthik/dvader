@@ -17,6 +17,10 @@ summary: Short answers to common Dvader questions.
 
 **Does it report money saved?** No. The local package only tests rough output compression fixtures.
 
+**What license does it use?** MIT. Keep the copyright and license notice when reusing or publishing copies.
+
+**How do I contribute?** Open or pick an issue, create a feature branch from `main`, update docs with behavior changes, run the required checks, then open a PR with problem, fix, and proof. See [Contributing](/docs/contributing).
+
 **How do I turn it off?** Say `stop dvader` or `normal mode`.
 
 **How do I remove it?**

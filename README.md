@@ -1,4 +1,4 @@
-**dvader-skills** · [![npm](https://img.shields.io/badge/npm-dvader--skills-1.4.0-blue?logo=npm)](https://www.npmjs.com/package/dvader-skills) [![license](https://img.shields.io/badge/license-MIT-green)](LICENSE) [![node](https://img.shields.io/badge/node-%3E%3D16.17-brightgreen)]() [![skills](https://img.shields.io/badge/skills-18-orange)](https://github.com/Imtejakarthik/dvader/tree/main/skills) [![benchmark](https://img.shields.io/badge/benchmark-73%25%20avg-red)](benchmarks/README.md)
+**dvader-skills** · [![npm](https://img.shields.io/badge/npm-dvader--skills-1.4.0-blue?logo=npm)](https://www.npmjs.com/package/dvader-skills) [![license](https://img.shields.io/badge/license-MIT-green)](LICENSE) [![node](https://img.shields.io/badge/node-%3E%3D16.17-brightgreen)]() [![skills](https://img.shields.io/badge/skills-18-orange)](https://github.com/Imtejakarthik/dvader/tree/main/skills) [![benchmark](https://img.shields.io/badge/benchmark-81%25%20rough-red)](benchmarks/README.md)
 
 # Dvader Skills
 
@@ -32,7 +32,7 @@ Same diagnosis. Same fix. Same proof step. Only filler died.
 
 ```text
 ┌──────────────────────────────────────────────┐
-│ output benchmark average          73% saved  │
+│ output benchmark average          81% saved  │
 │ public headline claim          up to 80%     │
 │ code changed                         0%      │
 │ proof required                      yes      │
@@ -43,7 +43,7 @@ Code, commands, file paths, API names, exact errors, and security warnings never
 
 ## Install
 
-One package. Eighteen skills. Zero runtime dependencies.
+One package. Eighteen skills. One benchmark tokenizer dependency.
 
 ```bash
 npx dvader-skills
@@ -87,6 +87,7 @@ Run it:
 
 ```bash
 npm run bench:tokens
+npm run bench:gpt
 ```
 
 Current result:
@@ -95,27 +96,28 @@ Current result:
 
 | Task | Normal | Dvader | Saved |
 |---|---:|---:|---:|
-| React re-render diagnosis | 57 | 13 | 77% |
-| Auth middleware expiry fix | 42 | 13 | 69% |
-| PostgreSQL pool setup | 42 | 11 | 74% |
-| PR review finding | 42 | 11 | 74% |
-| Docker multi-stage build | 41 | 12 | 71% |
-| Race condition debug | 43 | 14 | 67% |
+| React re-render diagnosis | 57 | 8 | 86% |
+| Auth middleware expiry fix | 42 | 9 | 79% |
+| PostgreSQL pool setup | 42 | 6 | 86% |
+| PR review finding | 42 | 8 | 81% |
+| Docker multi-stage build | 41 | 8 | 80% |
+| Race condition debug | 43 | 9 | 79% |
 | Commit message | 43 | 5 | 88% |
-| Test strategy | 44 | 13 | 70% |
-| Benchmark instruction | 42 | 11 | 74% |
-| Done report | 38 | 10 | 74% |
-| TypeScript narrowing bug | 43 | 9 | 79% |
-| API pagination fix | 42 | 11 | 74% |
-| Cache invalidation report | 42 | 13 | 69% |
-| CLI error handling | 42 | 13 | 69% |
-| Accessibility review | 44 | 11 | 75% |
-| Release checklist | 38 | 13 | 66% |
-| **Average** | **685** | **183** | **73%** |
+| Test strategy | 44 | 9 | 80% |
+| Benchmark instruction | 42 | 10 | 76% |
+| Done report | 38 | 6 | 84% |
+| TypeScript narrowing bug | 43 | 6 | 86% |
+| API pagination fix | 42 | 8 | 81% |
+| Cache invalidation report | 42 | 9 | 79% |
+| CLI error handling | 42 | 9 | 79% |
+| Accessibility review | 44 | 9 | 80% |
+| Release checklist | 38 | 11 | 71% |
+| **Average** | **685** | **130** | **81%** |
 
-Measured average: **73% fewer rough output tokens** across 16 report-style coding tasks.
+Measured average: **81% fewer rough output tokens** across 16 report-style coding tasks.
+GPT-tokenizer check: **73% fewer tokens** on the same fixture.
 
-The headline stays conservative: **up to 80% fewer output tokens** on report-style replies. The 88% row is real, but it is a tiny commit-message case, not the product promise.
+The headline stays conservative: **up to 80% fewer output tokens** on report-style replies. The 81% rough-token average is real, but tokenizer choice matters, so the public promise stays capped.
 
 This is not a billing calculator. Input tokens, model reasoning, tool payloads, and skill text overhead still matter.
 

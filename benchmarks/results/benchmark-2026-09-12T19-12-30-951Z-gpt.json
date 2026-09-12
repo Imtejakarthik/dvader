@@ -1,0 +1,112 @@
+{
+  "metadata": {
+    "fixtureVersion": 2,
+    "tokenizer": "gpt",
+    "generatedAt": "2026-09-12T19:12:30.951Z",
+    "samples": 16
+  },
+  "rows": [
+    {
+      "task": "React re-render diagnosis",
+      "normal": 65,
+      "dvader": 14,
+      "saved": 0.7846153846153846
+    },
+    {
+      "task": "Auth middleware expiry fix",
+      "normal": 45,
+      "dvader": 13,
+      "saved": 0.7111111111111111
+    },
+    {
+      "task": "PostgreSQL pool setup",
+      "normal": 47,
+      "dvader": 10,
+      "saved": 0.7872340425531915
+    },
+    {
+      "task": "PR review finding",
+      "normal": 47,
+      "dvader": 14,
+      "saved": 0.7021276595744681
+    },
+    {
+      "task": "Docker multi-stage build",
+      "normal": 47,
+      "dvader": 12,
+      "saved": 0.7446808510638299
+    },
+    {
+      "task": "Race condition debug",
+      "normal": 48,
+      "dvader": 14,
+      "saved": 0.7083333333333333
+    },
+    {
+      "task": "Commit message",
+      "normal": 49,
+      "dvader": 9,
+      "saved": 0.8163265306122449
+    },
+    {
+      "task": "Test strategy",
+      "normal": 48,
+      "dvader": 15,
+      "saved": 0.6875
+    },
+    {
+      "task": "Benchmark instruction",
+      "normal": 50,
+      "dvader": 17,
+      "saved": 0.6599999999999999
+    },
+    {
+      "task": "Done report",
+      "normal": 42,
+      "dvader": 9,
+      "saved": 0.7857142857142857
+    },
+    {
+      "task": "TypeScript narrowing bug",
+      "normal": 51,
+      "dvader": 13,
+      "saved": 0.7450980392156863
+    },
+    {
+      "task": "API pagination fix",
+      "normal": 46,
+      "dvader": 11,
+      "saved": 0.7608695652173914
+    },
+    {
+      "task": "Cache invalidation report",
+      "normal": 47,
+      "dvader": 14,
+      "saved": 0.7021276595744681
+    },
+    {
+      "task": "CLI error handling",
+      "normal": 47,
+      "dvader": 14,
+      "saved": 0.7021276595744681
+    },
+    {
+      "task": "Accessibility review",
+      "normal": 48,
+      "dvader": 13,
+      "saved": 0.7291666666666667
+    },
+    {
+      "task": "Release checklist",
+      "normal": 48,
+      "dvader": 20,
+      "saved": 0.5833333333333333
+    }
+  ],
+  "total": {
+    "task": "Average",
+    "normal": 775,
+    "dvader": 212,
+    "saved": 0.7264516129032258
+  }
+}

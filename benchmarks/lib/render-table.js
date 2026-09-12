@@ -2,9 +2,9 @@
 
 const { savings, pct } = require('./rough-tokenizer');
 
-function benchmarkRows(samples) {
+function benchmarkRows(samples, tokenizer) {
   return samples.map((sample) => {
-    const result = savings(sample.normal, sample.dvader);
+    const result = savings(sample.normal, sample.dvader, tokenizer);
     return {
       task: sample.task,
       normal: result.normal,

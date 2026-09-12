@@ -17,6 +17,16 @@ One page. Everything the suite does. Read it, pick, move.
 | `dvader-build` | The blade. Least code that wins. Stdlib first. Root-cause fixes. |
 | `dvader-review` | The eye. Multi-axis code review, one line per finding, severity labels. |
 | `dvader-hunt` | The hunter. Symptom → repro → root cause → one guard → proof. |
+| `dvader-test` | The trial. Smallest check that proves it. Run it, show exit 0. |
+| `dvader-bench` | The scale. Measure first. Before → after → ratio. No vibes. |
+| `dvader-audit` | The sweep. Repo-wide bloat scan, ranked delete/shrink/stdlib list. |
+| `dvader-debt` | The ledger. Harvest `dvader:` shortcut markers so deferrals don't rot. |
+| `dvader-commit` | The mark. Terse Conventional Commits. ≤50-char subject, why over what. |
+| `dvader-ship` | The launch. Branch → commit → push → PR → verify, one pass. |
+| `dvader-security` | The vault. Threat scan — the ONE axis where full grammar always wins. |
+| `dvader-compress` | The shrink. Compress memory files, code blocks read-only. Saves ~46% input. |
+| `dvader-stats` | The count. Honest session token usage + savings. Never invents numbers. |
+| `dvader-explain` | The lesson. The one exception — full prose override, headers, still no closer. |
 | `dvader-verify` | The proof. No "Work done" without a check run. |
 | `dvader-help` | This card. |
 

@@ -1,4 +1,4 @@
-**dvader-skills** · [![npm](https://img.shields.io/badge/npm-dvader--skills-1.0.0-blue?logo=npm)](https://www.npmjs.com/package/dvader-skills) [![license](https://img.shields.io/badge/license-MIT-green)](LICENSE) [![node](https://img.shields.io/badge/node-%3E%3D16.17-brightgreen)]() [![skills](https://img.shields.io/badge/skills-8-orange)](https://github.com/Imtejakarthik/dvader/tree/main/skills) [![push](https://img.shields.io/badge/output-%E2%88%9285%25-red)](#the-math)
+**dvader-skills** · [![npm](https://img.shields.io/badge/npm-dvader--skills-1.0.0-blue?logo=npm)](https://www.npmjs.com/package/dvader-skills) [![license](https://img.shields.io/badge/license-MIT-green)](LICENSE) [![node](https://img.shields.io/badge/node-%3E%3D16.17-brightgreen)]() [![skills](https://img.shields.io/badge/skills-18-orange)](https://github.com/Imtejakarthik/dvader/tree/main/skills) [![push](https://img.shields.io/badge/output-%E2%88%9285%25-red)](#the-math)
 
 ---
 
@@ -62,18 +62,45 @@ Dvader:
 
 ---
 
-## The crew — eight skills
+## The crew — eighteen skills
+
+**The core**
 
 | Skill | Job |
 |-------|-----|
 | [`dvader`](skills/dvader/SKILL.md) | The voice. Speak simple, act strong, friendly Vader. Persistent base mode. |
 | [`dvader-short`](skills/dvader-short/SKILL.md) | The dial. Three gears — order → guard → master. More breath, fewer words. |
 | [`dvader-do`](skills/dvader-do/SKILL.md) | The order. Step-first. State + step. One next step at the end of every reply. |
-| [`dvader-build`](skills/dvader-build/SKILL.md) | The blade. Build-the-least ladder. Stdlib first. Minimum code that wins. |
-| [`dvader-review`](skills/dvader-review/SKILL.md) | The eye. Multi-axis code review — one line per finding, severity labels, file:line. |
-| [`dvader-hunt`](skills/dvader-hunt/SKILL.md) | The hunter. Symptom → repro → root cause → one guard → runnable proof. |
-| [`dvader-verify`](skills/dvader-verify/SKILL.md) | The proof. Run the check, paste the output, then claim `Work done.` |
 | [`dvader-help`](skills/dvader-help/SKILL.md) | This card. One-shot reference for the whole suite. |
+
+**Build & ship**
+
+| Skill | Job |
+|-------|-----|
+| [`dvader-build`](skills/dvader-build/SKILL.md) | The blade. Build-the-least ladder. Stdlib first. Minimum code that wins. |
+| [`dvader-commit`](skills/dvader-commit/SKILL.md) | The mark. Terse Conventional Commits — ≤50-char subject, why over what. |
+| [`dvader-ship`](skills/dvader-ship/SKILL.md) | The launch. Branch → commit → push → PR → verify, one pass. |
+| [`dvader-review`](skills/dvader-review/SKILL.md) | The eye. Multi-axis code review — one line per finding, severity labels, file:line. |
+| [`dvader-audit`](skills/dvader-audit/SKILL.md) | The sweep. Repo-wide bloat scan — ranked delete / shrink / stdlib list. |
+| [`dvader-debt`](skills/dvader-debt/SKILL.md) | The ledger. Harvest `dvader:` shortcut markers so deferrals don't rot. |
+
+**Quality & safety**
+
+| Skill | Job |
+|-------|-----|
+| [`dvader-test`](skills/dvader-test/SKILL.md) | The trial. Smallest check that proves it. Run it, show exit 0. |
+| [`dvader-hunt`](skills/dvader-hunt/SKILL.md) | The hunter. Symptom → repro → root cause → one guard → runnable proof. |
+| [`dvader-bench`](skills/dvader-bench/SKILL.md) | The scale. Measure first. Before → after → ratio. No vibes. |
+| [`dvader-security`](skills/dvader-security/SKILL.md) | The vault. Threat scan — the one axis where full grammar always wins. |
+| [`dvader-verify`](skills/dvader-verify/SKILL.md) | The proof. Run the check, paste the output, then claim `Work done.` |
+
+**Tokens & memory**
+
+| Skill | Job |
+|-------|-----|
+| [`dvader-compress`](skills/dvader-compress/SKILL.md) | The shrink. Compress memory files — code blocks read-only. Saves ~46% input. |
+| [`dvader-stats`](skills/dvader-stats/SKILL.md) | The count. Honest session token usage + savings. Never invents numbers. |
+| [`dvader-explain`](skills/dvader-explain/SKILL.md) | The lesson. The one exception — full prose override, headers, still no closer. |
 
 ### Review in one breath
 

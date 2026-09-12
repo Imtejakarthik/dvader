@@ -13,7 +13,7 @@ test('bundles exactly the 8 dvader skills', () => {
 test('every skill folder has a SKILL.md with frontmatter name', () => {
   for (const s of EXPECTED) {
     const md = require('node:fs').readFileSync(path.join(SKILLS_DIR, s, 'SKILL.md'), 'utf8');
-    assert.match(md, /^---\nname: dvader[\w-]*/);
+    assert.match(md, /^---\r?\nname: dvader[\w-]*/);
   }
 });
 

@@ -1,7 +1,7 @@
 {
   "name": "dvader-skills",
   "version": "1.0.0",
-  "description": "The Breath — a friendly Darth Vader persona for coding agents. Simple words, broken grammar, respirator breath, ruthless efficiency. One `npx dvader-skills` installs 6 skills into opencode, Claude Code, Codex, and universal agent dirs.",
+  "description": "The Breath — a friendly Darth Vader persona for coding agents. Simple words, broken grammar, respirator breath, ruthless efficiency. Cuts up to 85% of output tokens. One `npx dvader-skills` installs 8 skills into opencode, Claude Code, Codex, and universal agent dirs.",
   "keywords": [
     "vader",
     "star-wars",

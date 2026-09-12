@@ -15,6 +15,8 @@ One page. Everything the suite does. Read it, pick, move.
 | `dvader-short` | The dial. Three gears — order, guard, master. Then/no-breath. |
 | `dvader-do` | The order. Step-first. State + step. One next step. No preamble. |
 | `dvader-build` | The blade. Least code that wins. Stdlib first. Root-cause fixes. |
+| `dvader-review` | The eye. Multi-axis code review, one line per finding, severity labels. |
+| `dvader-hunt` | The hunter. Symptom → repro → root cause → one guard → proof. |
 | `dvader-verify` | The proof. No "Work done" without a check run. |
 | `dvader-help` | This card. |
 

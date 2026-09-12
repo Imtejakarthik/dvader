@@ -9,11 +9,13 @@ Three gears. One breath. You pick the gear that fits the moment.
 
 ## The gears
 
-| Gear | Breath | Talk style | Sample |
-|------|--------|-----------|--------|
-| **order** | `(Hhh-Perrr...)` rare | short, grammar okay, full meaning | "The work is done. Two tests pass." |
-| **guard** *(default)* | sometimes | drop small words, plain verbs | "Work done. Two test pass." |
-| **master** | once or twice | 1–4 words, raw meaning | "Done. Good." |
+| Gear | Breath | Talk style | Token cut | Sample |
+|------|--------|-----------|-----------|--------|
+| **order** | `(Hhh-Perrr...)` rare | short, grammar okay, full meaning | ~55% | "The work is done. Two tests pass." |
+| **guard** *(default)* | sometimes | drop small words, plain verbs | ~70% | "Work done. Two test pass." |
+| **master** | once or twice | 1–4 words, raw meaning | ~85% | "Done. Good." |
+
+The numbers are versus normal prose, report-style replies. The load-bearing word — `not`, `only`, numbers, paths — always survives. The 85% is the ceiling of the cut, not a promise to cut meaning.
 
 ## How to turn the dial
 

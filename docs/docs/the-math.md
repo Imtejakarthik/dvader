@@ -1,67 +1,50 @@
 ---
 title: The Math
-summary: Output-rate billing, the 272K cliff, and the measured effort ladder.
+summary: Honest token-savings claims and how Dvader measures them.
 ---
 
 # The Math
 
-The Doctrine exists because of a pricing reality. Traditional "be thorough" prompting is the single most
-expensive way to use a reasoning model. Here is the arithmetic that drives the rules.
+Dvader targets short report-style replies: status, review findings, proof lines, and next steps.
 
-## Reasoning bills at output rates
+## Public Claim
 
-Reasoning (thinking) tokens on GPT-6 Astra are billed at the **output** rate — roughly $50/M, not the
-input rate. Every unnecessary thought, every restated state, every "let me think about this" is priced
-like generated text your user has to pay for twice: once to compute, once to read.
+Dvader targets up to **80% fewer output tokens** on short report-style replies.
 
-The Doctrine's response is structural: speak least before the model thinks, build least before the model
-runs, so the reasoning budget goes to choices that matter.
+That number must come from fixtures, not vibes. Some extreme replies may compress more. We do not market unrepeatable extremes.
 
-## Effort floors cost money even when they answer nothing
+## Current Fixture Check
 
-Default effort floors force computation on trivial turns. The measured ladder from the committed suite
-(`vader-palpatine` holds the full table):
+The package includes a rough token-savings test:
 
-| effort | reasoning tokens/call | cost vs low | accuracy |
-|---|---|---|---|
-| low | ~151 | 1.0x | 33/33 |
-| medium | ~159 | ~1.05x | 33/33 |
-| max | ~370 | ~2.3x | 33/33 |
+```bash
+npm run bench:tokens
+```
 
-**`max` is 2.3x the cost of `low` on verified tasks with zero accuracy gain.** Answers identical.
+It compares normal report prose against Dvader-style reports in `test/fixtures/token-samples.json`.
 
-Doctrine default: **low**. Escalate only on a cited failure — a wrong answer with a repro, not a hunch.
-`benchmark-before-escalate` is the rule.
+The test is intentionally conservative:
 
-## The 272K cliff
+- It uses whitespace token estimates, not model tokenizer internals.
+- It checks representative report-style replies.
+- It does not claim billing savings.
+- It does not claim every answer compresses equally.
 
-Inputs over **272K tokens re-price the whole request**: roughly 2x input/cache, 1.5x output. Crossing
-the line once makes every token in the conversation cost more — not just the ones after the line.
+## Why 80%, Not More
 
-`vader-thrawn` carries the long-run counterplay: FILTER → SHRINK → SLOT.
+The public number should be repeatable. A one-word answer can beat 80%, but a useful answer often needs paths, commands, error lines, and proof. Those facts stay.
 
-1. **FILTER** — drop context that is not load-bearing. Summaries of old turns rarely are.
-2. **SHRINK** — compress what must stay: decisions, contracts, next steps. Not prose, structure.
-3. **SLOT** — keep only your slot of the conversation. Everything else moves to files or a fresh thread.
+Shorter is good. Correct is mandatory.
 
-Turn-count accounting lives here too: in long sessions the per-turn overhead compounds, and the fix is
-batching, not bravery.
+## When Compression Stops
 
-## Where the drain usually lives
+Dvader adds words back for:
 
-`vader-ackbar` audits usage data to find silent sinks — the things that consume the budget with no
-committed benefit:
-
-- tool payloads the model never reads (large logs piped verbatim)
-- re-pasting the same file contents every turn instead of a diff
-- restating full state "for clarity"
-- effort forced to max for the whole session
-- slowly growing system context that passes the cliff
-
-## The honest-number note
-
-The 50–65% output-token figure is a measurement on the committed benchmark suite, with a per-prompt
-range of 22–87%. It is an estimate of how the skills compress real prompts — not a promise about your
-bill, and nothing local ever reports a dollar figure.
+- security risk
+- data loss
+- legal or money-sensitive decisions
+- irreversible operations
+- ambiguous sequence
+- missing proof
 
 Next: [FAQ](/docs/faq).

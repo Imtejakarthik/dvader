@@ -24,16 +24,16 @@ Findings one per line, but the DANGER sentence stays full. Never abbreviate a se
 ```
 dvader-security — The Vault
 
-🔴 src/auth/login.ts:14 — User-controlled password is compared with plain string
-   equality against a constant. Use a constant-time comparison (timingSafeEqual);
-   the current check leaks length and timing.
-🔴 src/api/query.ts:52 — SQL string interpolation with user input. Parameterize:
-   SELECT * FROM items WHERE owner_id = ? (prepared statement).
-🟡 src/config.ts:31 — API key committed to the repo. Rotate immediately; move to
-   environment variable and add the key to .gitignore.
+CRITICAL src/auth/login.ts:14 — User-controlled password is compared with plain
+string equality against a constant. Use a constant-time comparison
+(timingSafeEqual); the current check leaks length and timing.
+CRITICAL src/api/query.ts:52 — SQL string interpolation with user input.
+Parameterize: SELECT * FROM items WHERE owner_id = ? (prepared statement).
+RISK src/config.ts:31 — API key committed to the repo. Rotate immediately; move
+to environment variable and add the key to .gitignore.
 ```
 
-Severity: `🔴` critical (exploitable), `🟡` risk (weakens), `🟢` note (housekeeping).
+Severity: `CRITICAL` exploitable, `RISK` weakens safety, `NOTE` housekeeping.
 
 ## The rules
 

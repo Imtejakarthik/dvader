@@ -2,8 +2,8 @@ import { defineConfig } from 'vitepress';
 
 export default defineConfig({
   lang: 'en-US',
-  title: 'The Vader Doctrine',
-  description: 'Docs for vader-skills — build least, speak least, move now, and let the reasoning model charge you less.',
+  title: 'Dvader Skills',
+  description: 'Docs for dvader-skills — short replies, smaller diffs, proof before Work done.',
   base: '/dvader/',
   head: [
     ['link', { rel: 'icon', href: '/dvader/assets/logo.png' }],
@@ -18,7 +18,7 @@ export default defineConfig({
       { text: 'Docs', link: '/docs/quickstart', activeMatch: '/docs/' },
       { text: 'Skills', link: '/docs/skills', activeMatch: '/docs/skills' },
       { text: 'The Math', link: '/docs/the-math', activeMatch: '/docs/the-math' },
-      { text: 'npm', link: 'https://www.npmjs.com/package/vader-skills' },
+      { text: 'npm', link: 'https://www.npmjs.com/package/dvader-skills' },
       { text: 'GitHub', link: 'https://github.com/Imtejakarthik/dvader' },
     ],
 
@@ -28,7 +28,7 @@ export default defineConfig({
         items: [
           { text: 'Quickstart', link: '/docs/quickstart' },
           { text: 'The Core', link: '/docs/the-core' },
-          { text: 'The Family (11 skills)', link: '/docs/skills' },
+          { text: 'Skill Map (18 skills)', link: '/docs/skills' },
         ],
       },
       {
@@ -50,7 +50,7 @@ export default defineConfig({
     socialLinks: [{ icon: 'github', link: 'https://github.com/Imtejakarthik/dvader' }],
 
     footer: {
-      message: 'The Vader Doctrine. Operate like the blade: build least, speak least, move now.',
+      message: 'Dvader Skills. Short replies, smaller diffs, proof before Work done.',
       copyright: 'MIT · © 2026 gtknrg',
     },
 

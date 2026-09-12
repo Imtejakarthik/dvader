@@ -1,0 +1,17 @@
+[
+  {
+    "name": "auth bug report",
+    "normal": "The authentication middleware is rejecting valid sessions because the token expiry check uses the wrong comparison operator. Change the boundary check and run the authentication test suite.",
+    "dvader": "(Hhh-Perrr...) Auth gate wrong. Expiry check kills valid session. Fix boundary. Run auth test."
+  },
+  {
+    "name": "work done report",
+    "normal": "I updated the installer test command so Node runs the JavaScript test files directly. The previous command attempted to execute the test directory as a module and failed before loading the tests.",
+    "dvader": "Work done. Test glob fixed. Directory no execute. Files run."
+  },
+  {
+    "name": "review finding",
+    "normal": "The request handler accepts a user-controlled file path and passes it directly to the filesystem without normalization. This can allow path traversal outside the intended directory.",
+    "dvader": "Path trust broken. User path hits filesystem raw. Normalize, then bound-check."
+  }
+]

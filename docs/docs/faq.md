@@ -1,29 +1,26 @@
 ---
 title: FAQ
-summary: Short answers to the common questions.
+summary: Short answers to common Dvader questions.
 ---
 
 # FAQ
 
-**Does the Doctrine change my code style?** Yes — the build rules are the point. Fewer abstractions,
-stdlib first, one-line-where-possible, and a runnable check left behind for anything non-trivial.
+**Does Dvader change my code style?** Yes. It pushes smaller diffs, existing helpers, stdlib first, and proof before done.
 
-**Will it break anything?** The compression rules explicitly step aside for security, irreversible
-actions, and anything where terse is risky. Code, APIs, names, and error strings never get compressed.
+**Will it break technical accuracy?** It should not. The rules preserve negation, numbers, paths, commands, code, API names, and exact errors.
 
-**Does it need a CLI or daemon?** No. The installer is the only binary surface, and it has zero
-dependencies. The skills are plain markdown your agent already reads.
+**Does it need a daemon?** No. The installer copies plain markdown skill folders.
 
-**Which agents work?** Any agent that reads a skills directory — opencode, Claude Code, Codex, and the
-others on the known-target list. Run `npx vader-skills --help` for the full list.
+**Which agents work?** Any agent that reads a skills directory. The installer knows `agents`, `opencode`, `opencode-config`, `claude`, and `codex`.
 
-**Does it report usage or money?** No. Nothing local ever reports a dollar figure. The token figures in
-the docs come from a committed benchmark suite and are estimates about how prompts compress — not your bill.
+**Why only claim up to 80%?** Because the public claim should be repeatable and measured. Extreme replies can be shorter, but they are not the headline.
 
-**What is the 272K cliff?** Inputs over 272K tokens re-price the whole request (~2x input/cache, 1.5x
-output). The long-run skills exist largely to keep you under it.
+**Does it report money saved?** No. The local package only tests rough output compression fixtures.
 
-**Why is effort defaulted to low?** Because measured data says it costs 2.3x at max for identical answers
-on the verified suite. Escalate only on a cited failure.
+**How do I turn it off?** Say `stop dvader` or `normal mode`.
 
-**How do I turn it off?** Say `stop vader` or `normal mode`. Or remove entirely: `npx vader-skills remove`.
+**How do I remove it?**
+
+```bash
+npx dvader-skills remove
+```

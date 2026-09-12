@@ -1,105 +1,58 @@
 ---
 title: Quickstart
-summary: Install all eleven skills and feel the Doctrine in about five minutes.
+summary: Install Dvader and use the daily core in about five minutes.
 ---
 
 # Quickstart
 
-> Install all eleven skills and feel the Doctrine in about five minutes.
+Install the 18 Dvader skills, restart your agent, and use the daily core.
 
-The whole suite is one npm package with a **zero-dependency installer**. You are not wiring a proxy,
-a daemon, or a token counter — the skill files themselves do the work.
-
-## Install the skills
-
-<Steps>
-<div>
-This works for most agents:
+## Install
 
 ```bash
-npx vader-skills
+npx dvader-skills -t codex
 ```
 
-Without a flag this writes into the universal `~/.agents/skills` directory. If you are inside a project
-and want the skills scoped to it, pass `-p .` to write into `./.agents/skills` instead.
-</div>
-
-<div>
-Install to every agent directory at once:
+Other useful targets:
 
 ```bash
-# all known agent dirs
-npx vader-skills -t all
-
-# one agent
-npx vader-skills -t codex
-
-# opencode + Claude Code together
-npx vader-skills -t opencode,claude
-
-# preview before writing anything
-npx vader-skills --dry-run -t all
+npx dvader-skills
+npx dvader-skills -t all
+npx dvader-skills -t opencode,claude
+npx dvader-skills --dry-run -t all
 ```
 
-Known targets: `agents`, `opencode`, `opencode-config`, `claude`, `codex`, `all`, `universal`.
-</div>
+Default target is `~/.agents/skills`. Known targets: `agents`, `opencode`, `opencode-config`, `claude`, `codex`, `all`, `universal`.
 
-<div>
-Verify it took. You should now have eleven `vader-*` folders next to any existing skills:
+## First Five Minutes
 
-```text
-~/.agents/skills/
-  vader/
-  vader-ackbar/
-  vader-boba/
-  vader-help/
-  vader-jedi/
-  vader-mando/
-  vader-obiwan/
-  vader-palpatine/
-  vader-r2/
-  vader-thrawn/
-  vader-yoda/
-```
+1. Install: `npx dvader-skills -t codex`
+2. Restart your agent.
+3. Say: `dvader guard`.
+4. Try: `review this diff`.
+5. Finish work with: `dvader-verify`.
 
-Restart your agent so it loads the new SKILL.md files.
-</div>
-</Steps>
+## What Changes
 
-<Note title="What it changes, and what it does not">
-The Doctrine changes how your agent talks, builds, and sequences work. Output tokens drop by about
-50–65% on committed benchmarks, because filler, articles, and narration get cut. What stays byte-for-byte:
-code blocks, function and API names, CLI commands, and exact error strings. And the skills step aside on
-their own for security warnings, irreversible actions, and any moment where being terse would make an
-instruction ambiguous.
-</Note>
+Dvader changes agent behavior in three places:
 
-## First contact
+- Replies get shorter.
+- Code changes get smaller.
+- Claims require proof.
 
-After restart, say:
+What never changes: code blocks, function names, API names, CLI commands, paths, exact errors, security warnings, and data-loss warnings.
+
+## Turn It Off
 
 ```text
-be lazy         → the fused Doctrine engages
-yoda mode       → pure compression, padawan → grand-master
-adhd mode       → action-first protocol
-vader help      → the reference card
-```
-
-To leave the mode:
-
-```text
-stop vader
+stop dvader
 normal mode
 ```
 
 ## Uninstall
 
 ```bash
-npx vader-skills remove
+npx dvader-skills remove
 ```
 
-## Next steps
-
-- Read [The Core](/docs/the-core) for the persistent-mode rules and the compression gears.
-- Browse [The Family](/docs/skills) for all eleven skills and their triggers.
-- Check [The Math](/docs/the-math) for why effort and context budget are the real bill.
+Next: [The Core](/docs/the-core).

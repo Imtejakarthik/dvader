@@ -1,47 +1,48 @@
 ---
-title: The Family
-summary: All eleven skills, their jobs, and the trigger words that fire them.
+title: Skill Map
+summary: All 18 skills, what each one does, and when to use it.
 ---
 
-# The Family
+# Skill Map
 
-Eleven skills, one doctrine. Each carries a Star Wars namesake, a single job, and a set of trigger words
-that engage it without any slash prefix on most agents.
+Eighteen skills. Use the daily core first; reach for advanced tools when the work asks for them.
 
-## The matrix
+## Daily Core
 
-| Skill | Namesake | Job | Trigger |
-|---|---|---|---|
-| `vader` | Vader, the Chosen One | The fused Doctrine (all three disciplines embedded) + pre-send check + ground truth | "be lazy", "fewer tokens", "just do it", "action first" |
-| `vader-yoda` | *Do. Or do not.* | Pure compression — intensity ladder padawan → grand-master, CJK forms | "yoda mode", "compress", "be terse" |
-| `vader-mando` | *This is the way.* | Action protocol: the numbered rules, state restated every turn, one next step | "adhd mode", "stop burying the answer", "the way" |
-| `vader-obiwan` | *I have the high ground.* | Prompt guardrails, intent pinning, cache-prefix design, effort spikes | "high ground", "set boundaries", "lock the format" |
-| `vader-boba` | Right gadget, no wasted shot | Tool orchestration — delegate, don't describe; auto loops | "use a tool", "delegate", "stop explaining, run it" |
-| `vader-thrawn` | *I analyzed your art.* | Long-run strategy: FILTER → SHRINK → SLOT, the 272K cliff, turn-count accounting | "strategy", "context budget", "phase it" |
-| `vader-ackbar` | *It's a trap!* | Cost-trap audit — finds the silent token drain in your usage data | "it's a trap", "why is usage draining", "token report" |
-| `vader-palpatine` | Everything proceeds as foreseen | Effort budgets — the measured ladder, benchmark-before-escalate | "effort budget", "low vs max", "predict the cost" |
-| `vader-jedi` | The Code | Verify — never shave the load-bearing word, one runnable check | "verify first", "trust but verify", "one check" |
-| `vader-r2` | The backbone droid | Automation — one-command reruns, batch/Flex, idempotent pipelines | "automate this", "one command", "script it" |
-| `vader-help` | — | Quick reference card | "vader help" |
+| Skill | Use when | Job |
+|---|---|---|
+| `dvader-do` | Work needs motion | State, step, proof, next. |
+| `dvader-build` | Writing or refactoring code | Smallest working diff, stdlib first. |
+| `dvader-hunt` | Bug, failing test, wrong output | Repro, trace, root cause, proof. |
+| `dvader-test` | Change needs a check | Smallest runnable proof. |
+| `dvader-verify` | Before saying done | Run the check, then report. |
+| `dvader-review` | Before merge or PR review | Findings first, file:line, severity. |
 
-## Trigger etiquette
+## Advanced Tools
 
-The skills fire on their trigger words — say "be lazy" once and the Doctrine stays engaged until you
-say `normal mode`. Skill files are plain markdown: read any one under `skills/` to see every rule it
-carries.
+| Skill | Use when | Job |
+|---|---|---|
+| `dvader` | You want the base voice | Vader presence, small words, builder discipline. |
+| `dvader-short` | You want tighter output | `order`, `guard`, `master`, `kill`. |
+| `dvader-audit` | Repo feels bloated | Ranked delete/shrink/stdlib scan. |
+| `dvader-bench` | Something feels slow | Baseline, change, after, ratio. |
+| `dvader-commit` | Need a commit message | Terse Conventional Commit. |
+| `dvader-compress` | Memory docs are too large | Compress prose, preserve code blocks. |
+| `dvader-debt` | Need deferred shortcuts listed | Harvest `dvader:` markers. |
+| `dvader-explain` | You need understanding | Full prose lesson, no filler. |
+| `dvader-help` | Need the reference card | One-page chooser. |
+| `dvader-security` | Safety or threat scan | Full grammar, concrete fixes. |
+| `dvader-ship` | Make PR and verify | Branch, commit, push, PR. |
+| `dvader-stats` | Need usage caveats | Honest session token report. |
 
-## Legacy aliases
+## Chooser
 
-Aliases for the ancestor skills still resolve to their vader successors, so older muscle memory keeps
-working unchanged.
+Bug? `dvader-hunt`.
+Building? `dvader-build`.
+Confused? `dvader-explain`.
+Done? `dvader-verify`.
+Merging? `dvader-review`.
+Slow? `dvader-bench`.
+Security? `dvader-security`.
 
-## Synergy example: a bug report
-
-> "token usage is draining, why?"
-
-`vader-ackbar` engages first: read the local sessions, rank the sinks, and point at the exact entries
-burning the budget — a report, not a lecture. Then `vader-obiwan` pins the ask, `vader-boba` delegates
-the fix into a tool, and `vader-jedi` verifies before anything is claimed fixed. Four skills, one turn
-each, zero filler.
-
-Next: [The Math](/docs/the-math) — why reasoning models bill the way they do.
+Next: [The Math](/docs/the-math).

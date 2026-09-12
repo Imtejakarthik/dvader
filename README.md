@@ -1,191 +1,111 @@
-**dvader-skills** · [![npm](https://img.shields.io/badge/npm-dvader--skills-1.0.0-blue?logo=npm)](https://www.npmjs.com/package/dvader-skills) [![license](https://img.shields.io/badge/license-MIT-green)](LICENSE) [![node](https://img.shields.io/badge/node-%3E%3D16.17-brightgreen)]() [![skills](https://img.shields.io/badge/skills-18-orange)](https://github.com/Imtejakarthik/dvader/tree/main/skills) [![push](https://img.shields.io/badge/output-%E2%88%9285%25-red)](#the-math)
+**dvader-skills** · [![npm](https://img.shields.io/badge/npm-dvader--skills-1.2.1-blue?logo=npm)](https://www.npmjs.com/package/dvader-skills) [![license](https://img.shields.io/badge/license-MIT-green)](LICENSE) [![node](https://img.shields.io/badge/node-%3E%3D16.17-brightgreen)]() [![skills](https://img.shields.io/badge/skills-18-orange)](https://github.com/Imtejakarthik/dvader/tree/main/skills) [![output](https://img.shields.io/badge/output-up%20to%2080%25-red)](#the-math)
 
----
+# Dvader Skills
 
-# The Breath
+Vader mind. Small words. Builder heart.
 
-A friendly Darth Vader persona for coding agents.
-
-> Speak simple, speak little, act fast — and finish with one breath.
+Dvader is an 18-skill suite for coding agents. It cuts filler, keeps facts exact, pushes smaller diffs, and refuses to say `Work done` before proof exists.
 
 <p align="center">
   <img src="assets/logo.png" alt="Dvader" width="200" />
 </p>
 
-The best agent output is the output you never pay for. The Breath cuts the filler, keeps the facts, and turns every reply into money back in your pocket.
+## What It Does
 
----
+| Discipline | Rule |
+|:--|:--|
+| Speak less | Short fragments, no filler, exact technical facts. |
+| Build less | Existing helper, stdlib, native platform, smallest diff. |
+| Move now | State, step, proof, next. |
+| Prove done | Run the check before claiming completion. |
 
-## What it does
-
-Four faces, one doctrine — plus the lever that reasoning models charge you for:
-
-| Discipline | The rule |
-|:-----------|:---------|
-| **Speak simple** | Plain words, broken grammar, `brother` and `buddy`. Every reply under five words when it can. |
-| **Build least** | Best code is the code never written. One line beats fifty. Root-cause fixes only. |
-| **Move now** | State it. Step it. Next step. No preamble, no closer, no stalling. |
-| **Prove it** | Run the check. Paste the output. Only then say `Work done.` |
-| **Charge you** | Output tokens cost money. Every compressed reply is money back in your pocket. |
-
----
-
-## The Math
-
-Reasoning models bill you for two things: **input** (what you feed it) and **output** (what it breathes back). Output is the leak you can actually control.
-
-| Reply | Tokens | Cost vs normal |
-|-------|-------:|---------------:|
-| Normal prose | ~320 | 100% |
-| `order` gear | ~145 | **−55%** |
-| `guard` gear | ~95 | **−70%** |
-| `master` gear | ~48 | **−85%** |
-
-The 85% assumes report-style answers (`Work done`, status, next step) — not code, not analysis. Code stays whole. Numbers stay whole. The words around them get cut to the breath.
-
----
-
-## The voice — live
-
-<p align="center">
-  <img src="assets/demo-1.gif" alt="The Breath — a live Dvader answer" />
-</p>
-
-```
-Normal:
-  The authentication middleware is incorrectly rejecting valid sessions because the
-  token expiry check uses the wrong comparison operator on line 42 of src/auth.ts.
-  I recommend changing the condition to less-than and re-running the test suite.
-
-Dvader:
-  (Hhh-Perrr...) Token check broke. src/auth.ts:42 use < not <=.
-  Session die early. Fix line. Run npm test. Next step: paste fail line.
-```
-
-<p align="center">
-  <img src="assets/demo-2.gif" alt="The Breath — a live Dvader report" />
-</p>
-
----
-
-## The crew — eighteen skills
-
-**The core**
-
-| Skill | Job |
-|-------|-----|
-| [`dvader`](skills/dvader/SKILL.md) | The voice. Speak simple, act strong, friendly Vader. Persistent base mode. |
-| [`dvader-short`](skills/dvader-short/SKILL.md) | The dial. Three gears — order → guard → master. More breath, fewer words. |
-| [`dvader-do`](skills/dvader-do/SKILL.md) | The order. Step-first. State + step. One next step at the end of every reply. |
-| [`dvader-help`](skills/dvader-help/SKILL.md) | This card. One-shot reference for the whole suite. |
-
-**Build & ship**
-
-| Skill | Job |
-|-------|-----|
-| [`dvader-build`](skills/dvader-build/SKILL.md) | The blade. Build-the-least ladder. Stdlib first. Minimum code that wins. |
-| [`dvader-commit`](skills/dvader-commit/SKILL.md) | The mark. Terse Conventional Commits — ≤50-char subject, why over what. |
-| [`dvader-ship`](skills/dvader-ship/SKILL.md) | The launch. Branch → commit → push → PR → verify, one pass. |
-| [`dvader-review`](skills/dvader-review/SKILL.md) | The eye. Multi-axis code review — one line per finding, severity labels, file:line. |
-| [`dvader-audit`](skills/dvader-audit/SKILL.md) | The sweep. Repo-wide bloat scan — ranked delete / shrink / stdlib list. |
-| [`dvader-debt`](skills/dvader-debt/SKILL.md) | The ledger. Harvest `dvader:` shortcut markers so deferrals don't rot. |
-
-**Quality & safety**
-
-| Skill | Job |
-|-------|-----|
-| [`dvader-test`](skills/dvader-test/SKILL.md) | The trial. Smallest check that proves it. Run it, show exit 0. |
-| [`dvader-hunt`](skills/dvader-hunt/SKILL.md) | The hunter. Symptom → repro → root cause → one guard → runnable proof. |
-| [`dvader-bench`](skills/dvader-bench/SKILL.md) | The scale. Measure first. Before → after → ratio. No vibes. |
-| [`dvader-security`](skills/dvader-security/SKILL.md) | The vault. Threat scan — the one axis where full grammar always wins. |
-| [`dvader-verify`](skills/dvader-verify/SKILL.md) | The proof. Run the check, paste the output, then claim `Work done.` |
-
-**Tokens & memory**
-
-| Skill | Job |
-|-------|-----|
-| [`dvader-compress`](skills/dvader-compress/SKILL.md) | The shrink. Compress memory files — code blocks read-only. Saves ~46% input. |
-| [`dvader-stats`](skills/dvader-stats/SKILL.md) | The count. Honest session token usage + savings. Never invents numbers. |
-| [`dvader-explain`](skills/dvader-explain/SKILL.md) | The lesson. The one exception — full prose override, headers, still no closer. |
-
-### Review in one breath
-
-```
-src/auth.ts:42   ! expiry comparison: uses <= but expired means strict >. Fix: switch to <.
-src/api/handler.js:12  * user.id is any — confirm this is intentional.
-src/db/query.js:8  . raw SQL is clean, no injection here.
-```
-
-### Hunt in one breath
-
-```
-Symptom: login returns 401 for valid users.
-Cause:  src/auth.ts:42 expiry check: <= means token dies one second early.
-Fix:    src/auth.ts:42 switch <= to <.
-Proof:  npm test → auth suite 7/7 (was 6/7).
-Next:   push and watch dashboard.
-```
-
----
+Dvader cuts filler so you spend fewer tokens and less attention on status chatter.
 
 ## Install
 
+```bash
+npx dvader-skills
+npx dvader-skills -t codex
+npx dvader-skills -t all
+npx dvader-skills --dry-run
 ```
-npx dvader-skills              # to ~/.agents/skills
-npx dvader-skills -t all       # every agent dir
-npx dvader-skills --dry-run    # preview only
-```
+
+Default target: `~/.agents/skills`.
+
+Known targets: `agents`, `opencode`, `opencode-config`, `claude`, `codex`, `all`, `universal`.
 
 Remove:
 
-```
+```bash
 npx dvader-skills remove
 ```
 
----
+## Daily Core
 
-## The gears
+| Skill | Job |
+|---|---|
+| [`dvader-do`](skills/dvader-do/SKILL.md) | State, step, proof, next. |
+| [`dvader-build`](skills/dvader-build/SKILL.md) | Smallest working diff. |
+| [`dvader-hunt`](skills/dvader-hunt/SKILL.md) | Repro, trace, root cause, proof. |
+| [`dvader-test`](skills/dvader-test/SKILL.md) | Smallest runnable check. |
+| [`dvader-verify`](skills/dvader-verify/SKILL.md) | No `Work done` without proof. |
+| [`dvader-review`](skills/dvader-review/SKILL.md) | Findings first, file:line, severity. |
 
-Turn the dial live with **"shorter"**, **"shorter still"**, **"formal now"**, or **"no breath"**.
+## Full Suite
 
-| Gear | Style | Token cut | Sample |
-|------|-------|----------:|--------|
-| **order** | short, grammar okay | −55% | "Work is done. Two tests pass." |
-| **guard** *(default)* | plain words, no small stuff | −70% | "Work done. Two test pass." |
-| **master** | 1–4 words, raw | −85% | "(Hhh-Perrr...) Done." |
+| Skill | Job |
+|---|---|
+| [`dvader`](skills/dvader/SKILL.md) | Base voice and discipline. |
+| [`dvader-short`](skills/dvader-short/SKILL.md) | Compression gears: `order`, `guard`, `master`, `kill`. |
+| [`dvader-audit`](skills/dvader-audit/SKILL.md) | Repo-wide bloat scan. |
+| [`dvader-bench`](skills/dvader-bench/SKILL.md) | Measure before optimizing. |
+| [`dvader-commit`](skills/dvader-commit/SKILL.md) | Terse Conventional Commits. |
+| [`dvader-compress`](skills/dvader-compress/SKILL.md) | Compress memory files, preserve code. |
+| [`dvader-debt`](skills/dvader-debt/SKILL.md) | Harvest deferred shortcut markers. |
+| [`dvader-explain`](skills/dvader-explain/SKILL.md) | Full-prose teaching mode. |
+| [`dvader-help`](skills/dvader-help/SKILL.md) | One-page reference. |
+| [`dvader-security`](skills/dvader-security/SKILL.md) | Threat scan with full grammar. |
+| [`dvader-ship`](skills/dvader-ship/SKILL.md) | Branch, commit, push, PR, verify. |
+| [`dvader-stats`](skills/dvader-stats/SKILL.md) | Honest usage caveats. |
 
-Gear states itself once when it changes: `Gear: guard.` Then silence.
+## The Math
 
----
+Dvader targets up to **80% fewer output tokens** on short report-style replies.
 
-## The rules
+Token claims are measured on included fixtures and capped at conservative public wording. The goal is useful compression, not misleading benchmarks.
 
-1. Drop `I`, `am`, `is`, `are`, `the` when meaning stays safe.
-2. Say `brother` or `buddy` to the user. Always warm.
-3. Simple tense: `"Work done"` not `"The project has been completed successfully"`.
-4. Never drop `not`, `no`, `never`, or `only` — meaning flips.
-5. Numbers, paths, commands, error lines stay exact — facts first, brevity second.
-6. Security and data-loss talk gets full grammar. Danger is not compressed.
+Run the fixture check:
 
----
+```bash
+npm run bench:tokens
+```
 
-## Trigger map
+Run all tests:
 
-> **"dvader"** · **"vader mode"** · **"speak simple"** · **"work done"** · **"shorter"** · **"shortest"** · **"no fluff"** · **"brother"** · **"review"** · **"hunt"** · **"bug"**
+```bash
+npm test
+```
 
-## Off switch
+## Voice Example
 
-> **"stop dvader"** · **"normal mode"**
+Normal:
 
----
+```text
+The authentication middleware is rejecting valid sessions because the token expiry check uses the wrong comparison operator. Change the boundary check and run the authentication test suite.
+```
 
-## Why the voice matters
+Dvader:
 
-Every extra word is a token. Tokens cost money. Tokens cost attention. Tokens slow the loop. A reply that should be eight words becomes eighty, and the eighty-to-eight ratio is where reasoning models bleed you dry.
+```text
+(Hhh-Perrr...) Auth gate wrong. Expiry check kills valid session. Fix boundary. Run auth test.
+```
 
-The voice is the price control. Less filler, more signal. Every `Hhh-Perrr...` is a reminder: the mission is the only thing that matters.
+## Rules That Never Bend
 
----
+- Never drop `not`, `no`, `never`, or `only`.
+- Keep numbers, paths, commands, code, API names, and exact errors.
+- Use full clear grammar for security, money, legal, data-loss, and irreversible actions.
+- Add words back when compression hides order, cause, owner, amount, risk, or proof.
 
 ## License
 

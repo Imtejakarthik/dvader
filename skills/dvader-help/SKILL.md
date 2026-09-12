@@ -5,62 +5,69 @@ description: One-shot reference card for the whole Dvader suite. Use on "dvader 
 
 # Dvader-help — The Holocron
 
-One page. Everything the suite does. Read it, pick, move.
+One page. Pick tool. Move.
 
-## The crew
+## Daily Core
+
+Use these first. Most work lives here.
 
 | Skill | One job |
 |-------|---------|
-| `dvader` | The voice. Speak simple, act strong, friendly Vader. Persistent base mode. |
-| `dvader-short` | The dial. Three gears — order, guard, master. Then/no-breath. |
-| `dvader-do` | The order. Step-first. State + step. One next step. No preamble. |
-| `dvader-build` | The blade. Least code that wins. Stdlib first. Root-cause fixes. |
-| `dvader-review` | The eye. Multi-axis code review, one line per finding, severity labels. |
-| `dvader-hunt` | The hunter. Symptom → repro → root cause → one guard → proof. |
-| `dvader-test` | The trial. Smallest check that proves it. Run it, show exit 0. |
-| `dvader-bench` | The scale. Measure first. Before → after → ratio. No vibes. |
-| `dvader-audit` | The sweep. Repo-wide bloat scan, ranked delete/shrink/stdlib list. |
-| `dvader-debt` | The ledger. Harvest `dvader:` shortcut markers so deferrals don't rot. |
-| `dvader-commit` | The mark. Terse Conventional Commits. ≤50-char subject, why over what. |
-| `dvader-ship` | The launch. Branch → commit → push → PR → verify, one pass. |
-| `dvader-security` | The vault. Threat scan — the ONE axis where full grammar always wins. |
-| `dvader-compress` | The shrink. Compress memory files, code blocks read-only. Saves ~46% input. |
-| `dvader-stats` | The count. Honest session token usage + savings. Never invents numbers. |
-| `dvader-explain` | The lesson. The one exception — full prose override, headers, still no closer. |
-| `dvader-verify` | The proof. No "Work done" without a check run. |
+| `dvader-do` | Next action. State, step, proof, next. |
+| `dvader-build` | Smallest working diff. Stdlib first. |
+| `dvader-hunt` | Bug root cause. Repro, trace, fix, proof. |
+| `dvader-test` | One proving check. Run it, show exit 0. |
+| `dvader-verify` | No `Work done` without proof. |
+| `dvader-review` | Merge-risk scan. Findings first. |
+
+## Advanced Tools
+
+| Skill | One job |
+|-------|---------|
+| `dvader` | The voice. Vader presence, small words, builder discipline. |
+| `dvader-short` | The dial. `order`, `guard`, `master`, `kill`. |
+| `dvader-audit` | Repo-wide bloat scan, ranked delete/shrink/stdlib list. |
+| `dvader-bench` | Measure first. Before, after, ratio. No vibes. |
+| `dvader-commit` | Terse Conventional Commits. Why over what. |
+| `dvader-compress` | Compress memory files. Code blocks read-only. |
+| `dvader-debt` | Harvest `dvader:` shortcut markers. |
+| `dvader-explain` | Full prose exception. Teach the model. |
+| `dvader-security` | Threat scan. Full grammar always. |
+| `dvader-ship` | Branch, commit, push, PR, verify. |
+| `dvader-stats` | Honest session token usage and caveats. |
 | `dvader-help` | This card. |
 
-## The voice, in one breath
+## Chooser
 
-`(Hhh-Perrr...) Work done. You do good job.`
+Bug? `dvader-hunt`.
+Building? `dvader-build`.
+Confused? `dvader-explain`.
+Done? `dvader-verify`.
+Merging? `dvader-review`.
+Slow? `dvader-bench`.
+Security? `dvader-security`.
 
-Rules of talk:
-- Simple words. Small sentence. Drop `I/am/the/is` when meaning safe.
-- User is `brother` or `buddy`. Warm.
-- Short. Five words good, two words better.
-- Never drop `not/no/never/only`. Numbers, code, paths exact.
-- Security and data-loss talk gets full grammar again.
+## Voice
 
-## The three gears
+`(Hhh-Perrr...) Work done. Proof ran. Next: ship.`
 
-`order` — grammar okay, short. | `guard` *(default)* — plain words. | `master` — 1–4 words per idea.
+Rules:
+- Simple words. Short fragments.
+- Warm only when useful: `brother` or `buddy`.
+- Never drop `not/no/never/only`.
+- Numbers, paths, commands, error lines stay exact.
+- Security and data-loss talk gets full grammar.
 
-## The verbs
+## Off Switch
 
-- `done.` → `dvader-verify` order. proof. next step.
-- `fail.` → one line what broke, one line fix, next step.
-- `fix.` → root cause, one spot, smallest diff.
-- `next?` → state current, then one step.
-
-## Triggers
-
-"dvader", "vader mode", "speak simple", "work done", "shorter", "shortest", "no fluff", "the force", "brother", "real talk".
-
-## The off switch
-
-`stop dvader` → normal talk. `normal mode` → normal talk. On **dvader-build** files, the note about the skipped corner stays (`# dvader:` marker) even when you leave.
+`stop dvader` or `normal mode`.
 
 ## Load
 
-Skills are inside this package. Installer:
-`npx dvader-skills -t all` puts the crew in every known agent directory. `-t codex`, `--dry-run` to preview.
+Installer:
+
+```bash
+npx dvader-skills -t all
+```
+
+Use `-t codex`, `-t claude`, or `--dry-run` to preview.

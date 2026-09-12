@@ -1,38 +1,73 @@
-**dvader-skills** · [![npm](https://img.shields.io/badge/npm-dvader--skills-1.2.1-blue?logo=npm)](https://www.npmjs.com/package/dvader-skills) [![license](https://img.shields.io/badge/license-MIT-green)](LICENSE) [![node](https://img.shields.io/badge/node-%3E%3D16.17-brightgreen)]() [![skills](https://img.shields.io/badge/skills-18-orange)](https://github.com/Imtejakarthik/dvader/tree/main/skills) [![output](https://img.shields.io/badge/output-up%20to%2080%25-red)](#the-math)
+**dvader-skills** · [![npm](https://img.shields.io/badge/npm-dvader--skills-1.3.0-blue?logo=npm)](https://www.npmjs.com/package/dvader-skills) [![license](https://img.shields.io/badge/license-MIT-green)](LICENSE) [![node](https://img.shields.io/badge/node-%3E%3D16.17-brightgreen)]() [![skills](https://img.shields.io/badge/skills-18-orange)](https://github.com/Imtejakarthik/dvader/tree/main/skills) [![benchmark](https://img.shields.io/badge/benchmark-74%25%20avg-red)](benchmarks/README.md)
 
 # Dvader Skills
 
 Vader mind. Small words. Builder heart.
 
-Dvader is an 18-skill suite for coding agents. It cuts filler, keeps facts exact, pushes smaller diffs, and refuses to say `Work done` before proof exists.
+Your coding agent writes status like it gets paid by the paragraph. Dvader makes it stop. Facts stay exact. Mouth gets small. Proof comes before `Work done`.
 
 <p align="center">
-  <img src="assets/logo.png" alt="Dvader" width="200" />
+  <img src="assets/dvader-logo.png" alt="Dvader" width="220" />
 </p>
 
-## What It Does
+[See it](#see-it) · [Install](#install) · [Numbers](#numbers) · [Skills](#skills) · [Docs](https://imtejakarthik.github.io/dvader/) · [npm](https://www.npmjs.com/package/dvader-skills) · [Issues](https://github.com/Imtejakarthik/dvader/issues) · [License](#license)
 
-| Discipline | Rule |
-|:--|:--|
-| Speak less | Short fragments, no filler, exact technical facts. |
-| Build less | Existing helper, stdlib, native platform, smallest diff. |
-| Move now | State, step, proof, next. |
-| Prove done | Run the check before claiming completion. |
+---
 
-Dvader cuts filler so you spend fewer tokens and less attention on status chatter.
+## See It
+
+Normal agent:
+
+> The authentication middleware is rejecting valid sessions because the token expiry check uses the wrong comparison operator. Change the boundary check and run the authentication test suite.
+
+Dvader:
+
+> `(Hhh-Perrr...)` Auth gate wrong. Expiry check kills valid session. Fix boundary. Run auth test.
+
+Same diagnosis. Same fix. Same proof step. Only filler died.
+
+<p align="center">
+  <img src="assets/dvader-power.gif" alt="Dvader demo" />
+</p>
+
+```text
+┌──────────────────────────────────────────────┐
+│ output benchmark average          74% saved  │
+│ public headline claim          up to 80%     │
+│ code changed                         0%      │
+│ proof required                      yes      │
+└──────────────────────────────────────────────┘
+```
+
+Code, commands, file paths, API names, exact errors, and security warnings never get compressed away. Only the prose around them shrinks.
 
 ## Install
 
+One package. Eighteen skills. Zero runtime dependencies.
+
 ```bash
 npx dvader-skills
-npx dvader-skills -t codex
-npx dvader-skills -t all
-npx dvader-skills --dry-run
 ```
 
-Default target: `~/.agents/skills`.
+Target a specific agent:
 
-Known targets: `agents`, `opencode`, `opencode-config`, `claude`, `codex`, `all`, `universal`.
+```bash
+npx dvader-skills -t codex
+npx dvader-skills -t claude
+npx dvader-skills -t opencode
+```
+
+Install everywhere the package knows:
+
+```bash
+npx dvader-skills -t all
+```
+
+Preview first:
+
+```bash
+npx dvader-skills --dry-run -t all
+```
 
 Remove:
 
@@ -40,7 +75,43 @@ Remove:
 npx dvader-skills remove
 ```
 
-## Daily Core
+Default target: `~/.agents/skills`.
+
+Known targets: `agents`, `opencode`, `opencode-config`, `claude`, `codex`, `all`, `universal`.
+
+## Numbers
+
+The public benchmark uses rough whitespace token counts across ten coding-agent report tasks.
+
+Run it:
+
+```bash
+npm run bench:tokens
+```
+
+Current result:
+
+| Task | Normal | Dvader | Saved |
+|---|---:|---:|---:|
+| React re-render diagnosis | 57 | 13 | 77% |
+| Auth middleware expiry fix | 42 | 13 | 69% |
+| PostgreSQL pool setup | 42 | 11 | 74% |
+| PR review finding | 42 | 11 | 74% |
+| Docker multi-stage build | 41 | 12 | 71% |
+| Race condition debug | 43 | 14 | 67% |
+| Commit message | 43 | 5 | 88% |
+| Test strategy | 44 | 13 | 70% |
+| Benchmark instruction | 42 | 11 | 74% |
+| Done report | 38 | 10 | 74% |
+| **Average** | **434** | **113** | **74%** |
+
+The headline stays conservative: **up to 80% fewer output tokens** on report-style replies. The 88% row is real, but it is a tiny commit-message case, not the product promise.
+
+This is not a billing calculator. Input tokens, model reasoning, tool payloads, and skill text overhead still matter.
+
+## Skills
+
+Most days need the daily core:
 
 | Skill | Job |
 |---|---|
@@ -51,7 +122,7 @@ npx dvader-skills remove
 | [`dvader-verify`](skills/dvader-verify/SKILL.md) | No `Work done` without proof. |
 | [`dvader-review`](skills/dvader-review/SKILL.md) | Findings first, file:line, severity. |
 
-## Full Suite
+Full suite:
 
 | Skill | Job |
 |---|---|
@@ -68,36 +139,25 @@ npx dvader-skills remove
 | [`dvader-ship`](skills/dvader-ship/SKILL.md) | Branch, commit, push, PR, verify. |
 | [`dvader-stats`](skills/dvader-stats/SKILL.md) | Honest usage caveats. |
 
-## The Math
+## Docs And Package
 
-Dvader targets up to **80% fewer output tokens** on short report-style replies.
+- Docs site: [imtejakarthik.github.io/dvader](https://imtejakarthik.github.io/dvader/)
+- npm package: [npmjs.com/package/dvader-skills](https://www.npmjs.com/package/dvader-skills)
+- Source: [github.com/Imtejakarthik/dvader](https://github.com/Imtejakarthik/dvader)
+- Issues: [github.com/Imtejakarthik/dvader/issues](https://github.com/Imtejakarthik/dvader/issues)
 
-Token claims are measured on included fixtures and capped at conservative public wording. The goal is useful compression, not misleading benchmarks.
-
-Run the fixture check:
-
-```bash
-npm run bench:tokens
-```
-
-Run all tests:
+## Develop
 
 ```bash
 npm test
+npm run bench:tokens
+cd docs && npm run build
 ```
 
-## Voice Example
+Package preview:
 
-Normal:
-
-```text
-The authentication middleware is rejecting valid sessions because the token expiry check uses the wrong comparison operator. Change the boundary check and run the authentication test suite.
-```
-
-Dvader:
-
-```text
-(Hhh-Perrr...) Auth gate wrong. Expiry check kills valid session. Fix boundary. Run auth test.
+```bash
+npm pack --dry-run
 ```
 
 ## Rules That Never Bend

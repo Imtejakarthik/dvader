@@ -7,6 +7,8 @@ summary: Install Dvader and use the daily core in about five minutes.
 
 Install the 18 Dvader skills, restart your agent, and use the daily core.
 
+Docs site: [imtejakarthik.github.io/dvader](https://imtejakarthik.github.io/dvader/). npm package: [dvader-skills](https://www.npmjs.com/package/dvader-skills).
+
 ## Install
 
 ```bash
@@ -41,6 +43,14 @@ Dvader changes agent behavior in three places:
 - Claims require proof.
 
 What never changes: code blocks, function names, API names, CLI commands, paths, exact errors, security warnings, and data-loss warnings.
+
+## Check The Numbers
+
+```bash
+npm run bench:tokens
+```
+
+Current public fixture average: 74% fewer rough output tokens.
 
 ## Turn It Off
 

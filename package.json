@@ -1,6 +1,6 @@
 {
   "name": "dvader-skills",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "description": "The Breath — a friendly Darth Vader persona for coding agents. Simple words, respirator breath, ruthless efficiency. Targets up to 80% fewer output tokens on measured report-style replies. One `npx dvader-skills` installs 18 skills into opencode, Claude Code, Codex, and universal agent dirs.",
   "keywords": [
     "vader",
@@ -9,7 +9,11 @@
     "agent",
     "short",
     "minimal",
-    "prompt"
+    "prompt",
+    "codex",
+    "claude",
+    "compression",
+    "benchmark"
   ],
   "license": "MIT",
   "author": "gtknrg",
@@ -18,6 +22,7 @@
     "bin/",
     "skills/",
     "assets/",
+    "benchmarks/",
     "README.md",
     "LICENSE"
   ],
@@ -30,7 +35,12 @@
   },
   "scripts": {
     "test": "node --test test/*.js",
-    "bench:tokens": "node --test test/token-savings.test.js"
+    "bench:tokens": "node benchmarks/run.js",
+    "test:bench": "node --test test/token-savings.test.js"
+  },
+  "homepage": "https://imtejakarthik.github.io/dvader/",
+  "bugs": {
+    "url": "https://github.com/Imtejakarthik/dvader/issues"
   },
   "repository": {
     "type": "git",

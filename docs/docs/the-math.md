@@ -15,18 +15,24 @@ That number must come from fixtures, not vibes. Some extreme replies may compres
 
 ## Current Fixture Check
 
-The package includes a rough token-savings test:
+The package includes a rough token-savings benchmark:
 
 ```bash
 npm run bench:tokens
 ```
 
-It compares normal report prose against Dvader-style reports in `test/fixtures/token-samples.json`.
+It compares normal report prose against Dvader-style reports in `benchmarks/output-token-benchmark.json`.
+
+Current result:
+
+| Metric | Normal | Dvader | Saved |
+|---|---:|---:|---:|
+| Benchmark total | 434 | 113 | 74% |
 
 The test is intentionally conservative:
 
 - It uses whitespace token estimates, not model tokenizer internals.
-- It checks representative report-style replies.
+- It checks ten representative report-style replies.
 - It does not claim billing savings.
 - It does not claim every answer compresses equally.
 

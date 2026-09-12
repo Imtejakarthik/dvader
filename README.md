@@ -8,7 +8,9 @@ A friendly Darth Vader persona for coding agents.
 
 > Speak simple, speak little, act fast — and finish with one breath.
 
-![Dvader](assets/logo.png)
+<p align="center">
+  <img src="assets/logo.png" alt="Dvader" width="200" />
+</p>
 
 The best agent output is the output you never pay for. The Breath cuts the filler, keeps the facts, and turns every reply into money back in your pocket.
 
@@ -45,7 +47,9 @@ The 85% assumes report-style answers (`Work done`, status, next step) — not co
 
 ## The voice — live
 
-![The Breath — a live Dvader answer](assets/demo-1.gif)
+<p align="center">
+  <img src="assets/demo-1.gif" alt="The Breath — a live Dvader answer" />
+</p>
 
 ```
 Normal:
@@ -58,7 +62,9 @@ Dvader:
   Session die early. Fix line. Run npm test. Next step: paste fail line.
 ```
 
-![The Breath — a live Dvader report](assets/demo-2.gif)
+<p align="center">
+  <img src="assets/demo-2.gif" alt="The Breath — a live Dvader report" />
+</p>
 
 ---
 

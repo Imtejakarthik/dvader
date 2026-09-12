@@ -3,20 +3,22 @@ title: Dvader Skills
 description: "Darth Vader-flavored skills for coding agents: short replies, smaller diffs, proof before Work done."
 ---
 
-<link rel="icon" type="image/png" href="./assets/logo.png">
+<link rel="icon" type="image/png" href="./assets/favicon-80.png">
 
 <section class="dv-hero">
   <div class="dv-hero__copy">
-    <p class="dv-kicker">18 skills · zero runtime dependencies · MIT</p>
+    <p class="dv-kicker">18 skills · 74% benchmark average · MIT</p>
     <h1>Dvader Skills</h1>
     <p class="dv-line">Vader mind. Small words. Builder heart.</p>
     <p class="dv-sub">Short replies, smaller diffs, proof before <code>Work done</code>.</p>
     <div class="dv-actions">
       <a href="/dvader/docs/quickstart.html">Quickstart</a>
       <a href="/dvader/docs/skills.html">Skill Map</a>
+      <a href="https://www.npmjs.com/package/dvader-skills">npm</a>
     </div>
   </div>
   <div class="dv-panel">
+    <img src="./assets/dvader-logo.png" alt="Dvader helmet" />
     <pre><code>(Hhh-Perrr...) Work done.
 Proof ran.
 Next: ship.</code></pre>
@@ -52,6 +54,11 @@ npx dvader-skills --dry-run</code></pre>
   <p>Restart your agent after install. Say <code>dvader</code>, <code>shorter</code>, <code>review this diff</code>, or <code>work done</code>.</p>
 </section>
 
+<section class="dv-media">
+  <img src="./assets/dvader-power.gif" alt="Dvader power demo" />
+  <img src="./assets/dvader-shadow.gif" alt="Dvader shadow demo" />
+</section>
+
 <style>
   :root {
     --dv-red: #ef2b3d;
@@ -63,6 +70,7 @@ npx dvader-skills --dry-run</code></pre>
   .Layout {
     background:
       linear-gradient(180deg, rgba(239,43,61,.08), transparent 38rem),
+      url('./assets/hero-grid-background.png') top center / cover no-repeat fixed,
       #09090b;
   }
   .dv-hero {
@@ -123,6 +131,11 @@ npx dvader-skills --dry-run</code></pre>
     padding: 1.2rem;
     box-shadow: 0 22px 80px rgba(0,0,0,.35);
   }
+  .dv-panel img {
+    display: block;
+    width: min(16rem, 70%);
+    margin: 0 auto 1rem;
+  }
   .dv-panel pre,
   .dv-install pre {
     margin: 0;
@@ -158,9 +171,22 @@ npx dvader-skills --dry-run</code></pre>
     border: 1px solid var(--dv-line);
     border-radius: 8px;
   }
+  .dv-media {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-bottom: 4rem;
+  }
+  .dv-media img {
+    width: 100%;
+    border: 1px solid var(--dv-line);
+    border-radius: 8px;
+    background: #000;
+  }
   @media (max-width: 780px) {
     .dv-hero,
-    .dv-grid {
+    .dv-grid,
+    .dv-media {
       grid-template-columns: 1fr;
     }
     .dv-hero {

@@ -6,14 +6,14 @@ export default defineConfig({
   description: 'Docs for dvader-skills — short replies, smaller diffs, proof before Work done.',
   base: '/dvader/',
   head: [
-    ['link', { rel: 'icon', href: '/dvader/assets/logo.png' }],
+    ['link', { rel: 'icon', href: '/dvader/assets/favicon-80.png' }],
     ['meta', { name: 'theme-color', content: '#0b0b0f' }],
   ],
 
   appearance: true,
 
   themeConfig: {
-    logo: '/dvader/assets/logo.png',
+    logo: '/dvader/assets/dvader-logo.png',
     nav: [
       { text: 'Docs', link: '/docs/quickstart', activeMatch: '/docs/' },
       { text: 'Skills', link: '/docs/skills', activeMatch: '/docs/skills' },

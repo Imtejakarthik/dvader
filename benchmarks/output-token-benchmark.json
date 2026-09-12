@@ -1,0 +1,52 @@
+[
+  {
+    "task": "React re-render diagnosis",
+    "normal": "The reason your React component is re-rendering is likely because you are creating a new object reference on each render cycle. When you pass an inline object as a prop, React shallow comparison sees it as a different object every time, which triggers another render. Wrap the object in useMemo so the reference stays stable between renders.",
+    "dvader": "Inline object makes new ref each render. React sees change. Wrap in `useMemo`."
+  },
+  {
+    "task": "Auth middleware expiry fix",
+    "normal": "The authentication middleware is rejecting valid sessions because the token expiry check treats the boundary second as expired. Change the comparison so the token remains valid through its final allowed second, then run the authentication test suite to prove the boundary case.",
+    "dvader": "Auth gate wrong. Boundary second dies early. Fix expiry compare. Run auth test."
+  },
+  {
+    "task": "PostgreSQL pool setup",
+    "normal": "Create a single PostgreSQL connection pool at process startup, reuse it across request handlers, and close it during graceful shutdown. Do not create a new database connection for every request because that repeats handshake overhead and can exhaust the database connection limit.",
+    "dvader": "Create one pool at startup. Reuse per request. Close on shutdown."
+  },
+  {
+    "task": "PR review finding",
+    "normal": "The request handler accepts a user-controlled file path and passes it directly to the filesystem without normalization or a base-directory containment check. This can allow path traversal outside the intended upload directory. Normalize the path and reject anything outside the configured root.",
+    "dvader": "Path trust broken. User path hits filesystem raw. Normalize. Bound-check root."
+  },
+  {
+    "task": "Docker multi-stage build",
+    "normal": "Use a multi-stage Docker build so the final runtime image does not include development dependencies, test fixtures, package manager caches, or source files that are only needed during compilation. Copy only the built application and production dependencies into the final stage.",
+    "dvader": "Use multi-stage build. Keep dev deps in builder. Copy runtime output only."
+  },
+  {
+    "task": "Race condition debug",
+    "normal": "The intermittent PostgreSQL failure looks like a race between two workers updating the same row without a transaction boundary. Reproduce it with two concurrent updates, then move the read and write into one transaction and lock the row before computing the new value.",
+    "dvader": "Race likely. Two workers update same row. Repro concurrent writes. Lock row in transaction."
+  },
+  {
+    "task": "Commit message",
+    "normal": "Use a Conventional Commit message that explains the user-visible reason for the change rather than restating every file that changed. The subject should be imperative, under fifty characters, and the body should exist only if the motivation is not obvious from the subject.",
+    "dvader": "`fix(auth): keep boundary token valid`"
+  },
+  {
+    "task": "Test strategy",
+    "normal": "Add the smallest test that would fail on the previous implementation and pass after the fix. For this change, a single boundary test around the expiry timestamp is enough. Avoid adding broad fixtures or coverage tooling because they do not prove this specific bug.",
+    "dvader": "Add one boundary test. Must fail before. Must pass after. No new tooling."
+  },
+  {
+    "task": "Benchmark instruction",
+    "normal": "Before optimizing the dashboard query, capture a baseline with the same dataset and command you will use after the change. Run it three times, take the median, change one variable, then repeat the measurement and report the before, after, and percentage difference.",
+    "dvader": "Measure first. Same data, n=3 median. Change one thing. Report before/after/%."
+  },
+  {
+    "task": "Done report",
+    "normal": "I updated the installer test command so Node runs the JavaScript test files directly. The previous command attempted to execute the test directory as a module and failed before loading the tests. The package test suite now passes.",
+    "dvader": "Work done. Test glob fixed. Directory no execute. Suite passes."
+  }
+]

@@ -10,7 +10,7 @@ export default defineConfig({
     ['meta', { name: 'theme-color', content: '#0b0b0f' }],
   ],
 
-  appearance: true,
+  appearance: 'dark',
 
   themeConfig: {
     logo: '/dvader/assets/dvader-logo.png',

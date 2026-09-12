@@ -6,59 +6,61 @@ layout: home
 
 <link rel="icon" type="image/png" href="./assets/favicon-80.png">
 
-<section class="dv-hero">
-  <div class="dv-hero__copy">
-    <p class="dv-kicker">18 skills · strict review · MIT</p>
-    <h1>Dvader Skills</h1>
-    <p class="dv-line">Vader mind. Small words. Builder heart.</p>
-    <p class="dv-sub">Short replies, smaller diffs, proof before <code>Work done</code>.</p>
-    <div class="dv-actions">
-      <a href="./docs/quickstart.html">Quickstart</a>
-      <a href="./docs/skills.html">Skill Map</a>
-      <a href="https://www.npmjs.com/package/dvader-skills">npm</a>
+<main class="dv-page">
+  <section class="dv-hero">
+    <div class="dv-hero__copy">
+      <p class="dv-kicker">18 skills · strict review · MIT</p>
+      <h1>Dvader Skills</h1>
+      <p class="dv-line">Vader mind. Small words. Builder heart.</p>
+      <p class="dv-sub">Short replies, smaller diffs, proof before <code>Work done</code>.</p>
+      <div class="dv-actions">
+        <a href="./docs/quickstart.html">Quickstart</a>
+        <a href="./docs/skills.html">Skill Map</a>
+        <a href="https://www.npmjs.com/package/dvader-skills">npm</a>
+      </div>
     </div>
-  </div>
-  <div class="dv-panel">
-    <img src="./assets/dvader-logo.png" alt="Dvader helmet" />
-    <pre><code>(Hhh-Perrr...) Work done.
+    <div class="dv-panel">
+      <img src="./assets/dvader-logo.png" alt="Dvader helmet" />
+      <pre><code>(Hhh-Perrr...) Work done.
 Proof ran.
 Next: ship.</code></pre>
-  </div>
-</section>
+    </div>
+  </section>
 
-<section class="dv-grid">
-  <div>
-    <h2>Speak Less</h2>
-    <p>Cut filler, hedging, repeated state, and ceremonial narration. Keep names, numbers, paths, commands, and error lines exact.</p>
-  </div>
-  <div>
-    <h2>Build Less</h2>
-    <p>Use what already exists. Prefer stdlib, native platform features, and the smallest working diff.</p>
-  </div>
-  <div>
-    <h2>Prove More</h2>
-    <p>No <code>Work done</code> without a runnable check. Test, benchmark, inspect, or show the proof that fits the change.</p>
-  </div>
-</section>
+  <section class="dv-grid">
+    <div>
+      <h2>Speak Less</h2>
+      <p>Cut filler, hedging, repeated state, and ceremonial narration. Keep names, numbers, paths, commands, and error lines exact.</p>
+    </div>
+    <div>
+      <h2>Build Less</h2>
+      <p>Use what already exists. Prefer stdlib, native platform features, and the smallest working diff.</p>
+    </div>
+    <div>
+      <h2>Prove More</h2>
+      <p>No <code>Work done</code> without a runnable check. Test, benchmark, inspect, or show the proof that fits the change.</p>
+    </div>
+  </section>
 
-<section class="dv-band">
-  <h2>The Daily Core</h2>
-  <p>Most days need only six cards: <code>dvader-do</code>, <code>dvader-build</code>, <code>dvader-hunt</code>, <code>dvader-test</code>, <code>dvader-verify</code>, and <code>dvader-review</code>.</p>
-  <p>Everything else is specialized: security scans, benchmark loops, commit messages, PR shipping, memory compression, debt ledgers, and usage stats.</p>
-</section>
+  <section class="dv-band">
+    <h2>The Daily Core</h2>
+    <p>Most days need only six cards: <code>dvader-do</code>, <code>dvader-build</code>, <code>dvader-hunt</code>, <code>dvader-test</code>, <code>dvader-verify</code>, and <code>dvader-review</code>.</p>
+    <p>Everything else is specialized: security scans, benchmark loops, commit messages, PR shipping, memory compression, debt ledgers, and usage stats.</p>
+  </section>
 
-<section class="dv-install">
-  <h2>Install</h2>
-  <pre><code>npx dvader-skills -t codex
+  <section class="dv-install">
+    <h2>Install</h2>
+    <pre><code>npx dvader-skills -t codex
 npx dvader-skills -t all
 npx dvader-skills --dry-run</code></pre>
-  <p>Restart your agent after install. Say <code>dvader</code>, <code>shorter</code>, <code>review this diff</code>, or <code>work done</code>.</p>
-</section>
+    <p>Restart your agent after install. Say <code>dvader</code>, <code>shorter</code>, <code>review this diff</code>, or <code>work done</code>.</p>
+  </section>
 
-<section class="dv-media">
-  <img src="./assets/dvader-power.gif" alt="Dvader power demo" />
-  <img src="./assets/dvader-shadow.gif" alt="Dvader shadow demo" />
-</section>
+  <section class="dv-media">
+    <img src="./assets/dvader-power.gif" alt="Dvader power demo" />
+    <img src="./assets/dvader-shadow.gif" alt="Dvader shadow demo" />
+  </section>
+</main>
 
 <style>
   :root {
@@ -67,6 +69,17 @@ npx dvader-skills --dry-run</code></pre>
     --dv-muted: #aaa6a0;
     --dv-panel: rgba(20, 20, 22, .94);
     --dv-line: #2b2b30;
+  }
+  .dv-page {
+    width: 100%;
+    min-height: 100vh;
+    margin: -4rem 0 0;
+    padding: 4rem 0 1rem;
+    background:
+      linear-gradient(180deg, rgba(239,43,61,.10), transparent 38rem),
+      url('./assets/hero-grid-background.png') top center / cover no-repeat fixed,
+      #08080a;
+    color: var(--dv-ink);
   }
   .dv-hero,
   .dv-hero *,
@@ -91,9 +104,10 @@ npx dvader-skills --dry-run</code></pre>
     background:
       linear-gradient(180deg, rgba(239,43,61,.08), transparent 38rem),
       url('./assets/hero-grid-background.png') top center / cover no-repeat fixed,
-      #09090b;
+      #08080a !important;
   }
   body {
+    background: #08080a !important;
     overflow-x: hidden;
   }
   .dv-hero {

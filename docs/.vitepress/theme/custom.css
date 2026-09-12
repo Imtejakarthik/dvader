@@ -23,6 +23,7 @@ html:not(.dark) {
 
 html,
 body,
+#app,
 .Layout {
   background:
     linear-gradient(180deg, rgba(239, 43, 61, .09), transparent 36rem),
@@ -46,6 +47,10 @@ html {
 }
 
 .VPContent,
+.VPContent .container,
+.VPHome,
+.VPHome .container,
+.VPHomeHero,
 .VPDoc,
 .VPDoc .content,
 .VPDoc .content-container,

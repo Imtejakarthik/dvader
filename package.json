@@ -1,0 +1,41 @@
+{
+  "name": "dvader-skills",
+  "version": "1.0.0",
+  "description": "The Breath — a friendly Darth Vader persona for coding agents. Simple words, broken grammar, respirator breath, ruthless efficiency. One `npx dvader-skills` installs 6 skills into opencode, Claude Code, Codex, and universal agent dirs.",
+  "keywords": [
+    "vader",
+    "star-wars",
+    "skill",
+    "agent",
+    "short",
+    "minimal",
+    "prompt"
+  ],
+  "license": "MIT",
+  "author": "gtknrg",
+  "type": "commonjs",
+  "files": [
+    "bin/",
+    "skills/",
+    "assets/",
+    "README.md",
+    "LICENSE"
+  ],
+  "bin": {
+    "dvader-skills": "bin/dvader.js",
+    "dvader": "bin/dvader.js"
+  },
+  "engines": {
+    "node": ">=16.17"
+  },
+  "scripts": {
+    "test": "node --test test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Imtejakarthik/dvader.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

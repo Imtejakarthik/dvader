@@ -1,6 +1,6 @@
 ---
 name: dvader-review
-description: Ultra-terse Vader code review. Findings first. Includes thermonuclear structural review. Use for review, PR check, find issues, or Vader review.
+description: Ultra-terse Vader code review. Findings first. Includes strict structural review. Use for review, PR check, find issues, or Vader review.
 ---
 
 # dvader-review
@@ -23,7 +23,7 @@ Severity:
 - `~` nit
 - `.` note
 
-Thermonuclear mode: structural rot first.
+Strict structural mode: structural rot first.
 Block: >1000-line drift, shared-path leakage, one-off flags, cast fog, forwarding wrappers, moved complexity, partial updates.
 
 Security findings use full grammar.

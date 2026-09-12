@@ -18,6 +18,7 @@ export default defineConfig({
       { text: 'Docs', link: '/docs/quickstart', activeMatch: '/docs/' },
       { text: 'Skills', link: '/docs/skills', activeMatch: '/docs/skills' },
       { text: 'The Math', link: '/docs/the-math', activeMatch: '/docs/the-math' },
+      { text: 'Contribute', link: '/docs/contributing', activeMatch: '/docs/contributing' },
       { text: 'npm', link: 'https://www.npmjs.com/package/dvader-skills' },
       { text: 'GitHub', link: 'https://github.com/Imtejakarthik/dvader' },
     ],
@@ -36,6 +37,7 @@ export default defineConfig({
         items: [
           { text: 'The Math', link: '/docs/the-math' },
           { text: 'FAQ', link: '/docs/faq' },
+          { text: 'Contributing', link: '/docs/contributing' },
         ],
       },
     ],

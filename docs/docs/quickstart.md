@@ -34,6 +34,8 @@ Default target is `~/.agents/skills`. Known targets: `agents`, `opencode`, `open
 4. Try: `review this diff`.
 5. Finish work with: `dvader-verify`.
 
+For a harsh maintainability pass, say: `dvader-review thermonuclear`.
+
 ## What Changes
 
 Dvader changes agent behavior in three places:

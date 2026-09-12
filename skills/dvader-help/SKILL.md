@@ -18,7 +18,7 @@ Use these first. Most work lives here.
 | `dvader-hunt` | Bug root cause. Repro, trace, fix, proof. |
 | `dvader-test` | One proving check. Run it, show exit 0. |
 | `dvader-verify` | No `Work done` without proof. |
-| `dvader-review` | Merge-risk scan. Findings first. |
+| `dvader-review` | Merge-risk scan. Findings first. Includes thermonuclear structural mode. |
 
 ## Advanced Tools
 
@@ -46,6 +46,7 @@ Done? `dvader-verify`.
 Merging? `dvader-review`.
 Slow? `dvader-bench`.
 Security? `dvader-security`.
+Architecture messy? `dvader-review thermonuclear`.
 
 ## Voice
 

@@ -7,7 +7,7 @@ description: "Darth Vader-flavored skills for coding agents: short replies, smal
 
 <section class="dv-hero">
   <div class="dv-hero__copy">
-    <p class="dv-kicker">18 skills · 74% benchmark average · MIT</p>
+    <p class="dv-kicker">18 skills · thermonuclear review · MIT</p>
     <h1>Dvader Skills</h1>
     <p class="dv-line">Vader mind. Small words. Builder heart.</p>
     <p class="dv-sub">Short replies, smaller diffs, proof before <code>Work done</code>.</p>

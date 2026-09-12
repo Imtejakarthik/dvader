@@ -15,10 +15,11 @@ That number must come from fixtures, not vibes. Some extreme replies may compres
 
 ## Current Fixture Check
 
-The package includes a rough token-savings benchmark:
+The package includes rough and tokenizer-backed benchmark modes:
 
 ```bash
 npm run bench:tokens
+npm run bench:gpt
 ```
 
 It compares normal report prose against Dvader-style reports in `benchmarks/output-token-benchmark.json`.
@@ -27,11 +28,13 @@ Current result:
 
 | Metric | Normal | Dvader | Saved |
 |---|---:|---:|---:|
-| Benchmark total | 685 | 183 | 73% |
+| Rough total | 685 | 130 | 81% |
+| GPT tokenizer total | 775 | 212 | 73% |
 
 The test is intentionally conservative:
 
-- It uses whitespace token estimates, not model tokenizer internals.
+- It keeps rough whitespace counts as the zero-dependency default.
+- It also supports `--tokenizer=gpt` through `gpt-tokenizer`.
 - It checks 16 representative report-style replies.
 - It does not claim billing savings.
 - It does not claim every answer compresses equally.

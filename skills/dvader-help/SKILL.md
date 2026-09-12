@@ -1,74 +1,33 @@
 ---
 name: dvader-help
-description: One-shot reference card for the whole Dvader suite. Use on "dvader list", "dvader help", "what is vader mode", "all the vader skills", "which skill do I use". Shows every skill, its one job, and the off-switch.
+description: One-card Dvader suite map. Use for dvader help, list skills, which skill, vader mode.
 ---
 
-# Dvader-help — The Holocron
+# dvader-help
 
-One page. Pick tool. Move.
+Core:
+- `dvader`: voice
+- `dvader-do`: action
+- `dvader-build`: smallest diff
+- `dvader-hunt`: bug cause
+- `dvader-test`: proving check
+- `dvader-verify`: proof before done
+- `dvader-review`: findings first
 
-## Daily Core
+Tools:
+- `dvader-short`: compression gear
+- `dvader-audit`: bloat map
+- `dvader-bench`: measure first
+- `dvader-commit`: commit text
+- `dvader-compress`: prose shrink
+- `dvader-debt`: shortcut ledger
+- `dvader-explain`: teaching mode
+- `dvader-security`: threat scan
+- `dvader-ship`: branch/PR flow
+- `dvader-stats`: token report
 
-Use these first. Most work lives here.
+Install:
+`npx dvader-skills -t all`
 
-| Skill | One job |
-|-------|---------|
-| `dvader-do` | Next action. State, step, proof, next. |
-| `dvader-build` | Smallest working diff. Stdlib first. |
-| `dvader-hunt` | Bug root cause. Repro, trace, fix, proof. |
-| `dvader-test` | One proving check. Run it, show exit 0. |
-| `dvader-verify` | No `Work done` without proof. |
-| `dvader-review` | Merge-risk scan. Findings first. Includes thermonuclear structural mode. |
-
-## Advanced Tools
-
-| Skill | One job |
-|-------|---------|
-| `dvader` | The voice. Vader presence, small words, builder discipline. |
-| `dvader-short` | The dial. `order`, `guard`, `master`, `kill`. |
-| `dvader-audit` | Repo-wide bloat scan, ranked delete/shrink/stdlib list. |
-| `dvader-bench` | Measure first. Before, after, ratio. No vibes. |
-| `dvader-commit` | Terse Conventional Commits. Why over what. |
-| `dvader-compress` | Compress memory files. Code blocks read-only. |
-| `dvader-debt` | Harvest `dvader:` shortcut markers. |
-| `dvader-explain` | Full prose exception. Teach the model. |
-| `dvader-security` | Threat scan. Full grammar always. |
-| `dvader-ship` | Branch, commit, push, PR, verify. |
-| `dvader-stats` | Honest session token usage and caveats. |
-| `dvader-help` | This card. |
-
-## Chooser
-
-Bug? `dvader-hunt`.
-Building? `dvader-build`.
-Confused? `dvader-explain`.
-Done? `dvader-verify`.
-Merging? `dvader-review`.
-Slow? `dvader-bench`.
-Security? `dvader-security`.
-Architecture messy? `dvader-review thermonuclear`.
-
-## Voice
-
-`(Hhh-Perrr...) Work done. Proof ran. Next: ship.`
-
-Rules:
-- Simple words. Short fragments.
-- Warm only when useful: `brother` or `buddy`.
-- Never drop `not/no/never/only`.
-- Numbers, paths, commands, error lines stay exact.
-- Security and data-loss talk gets full grammar.
-
-## Off Switch
-
+Off:
 `stop dvader` or `normal mode`.
-
-## Load
-
-Installer:
-
-```bash
-npx dvader-skills -t all
-```
-
-Use `-t codex`, `-t claude`, or `--dry-run` to preview.

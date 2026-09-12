@@ -2,22 +2,22 @@
 
 | Task | Normal | Dvader | Saved |
 |---|---:|---:|---:|
-| React re-render diagnosis | 57 | 13 | 77% |
-| Auth middleware expiry fix | 42 | 13 | 69% |
-| PostgreSQL pool setup | 42 | 11 | 74% |
-| PR review finding | 42 | 11 | 74% |
-| Docker multi-stage build | 41 | 12 | 71% |
-| Race condition debug | 43 | 14 | 67% |
+| React re-render diagnosis | 57 | 8 | 86% |
+| Auth middleware expiry fix | 42 | 9 | 79% |
+| PostgreSQL pool setup | 42 | 6 | 86% |
+| PR review finding | 42 | 8 | 81% |
+| Docker multi-stage build | 41 | 8 | 80% |
+| Race condition debug | 43 | 9 | 79% |
 | Commit message | 43 | 5 | 88% |
-| Test strategy | 44 | 13 | 70% |
-| Benchmark instruction | 42 | 11 | 74% |
-| Done report | 38 | 10 | 74% |
-| TypeScript narrowing bug | 43 | 9 | 79% |
-| API pagination fix | 42 | 11 | 74% |
-| Cache invalidation report | 42 | 13 | 69% |
-| CLI error handling | 42 | 13 | 69% |
-| Accessibility review | 44 | 11 | 75% |
-| Release checklist | 38 | 13 | 66% |
-| **Average** | **685** | **183** | **73%** |
+| Test strategy | 44 | 9 | 80% |
+| Benchmark instruction | 42 | 10 | 76% |
+| Done report | 38 | 6 | 84% |
+| TypeScript narrowing bug | 43 | 6 | 86% |
+| API pagination fix | 42 | 8 | 81% |
+| Cache invalidation report | 42 | 9 | 79% |
+| CLI error handling | 42 | 9 | 79% |
+| Accessibility review | 44 | 9 | 80% |
+| Release checklist | 38 | 11 | 71% |
+| **Average** | **685** | **130** | **81%** |
 
-Measured average: **73% fewer rough output tokens** across 16 report-style coding tasks.
+Measured average: **81% fewer rough output tokens** across 16 report-style coding tasks.

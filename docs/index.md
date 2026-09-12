@@ -5,7 +5,7 @@ title: The Vader Doctrine
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="icon" type="image/png" href="/dvader/assets/logo.png">
+<link rel="icon" type="image/png" href="./assets/logo.png">
 
 <style>
   :root {
@@ -211,7 +211,7 @@ title: The Vader Doctrine
 
 <header class="top">
   <div class="brand">
-    <img src="/dvader/assets/logo.png" alt="vader-skills logo">
+    <img src="./assets/logo.png" alt="vader-skills logo">
     <span class="wm">vader<span class="red">-skills</span></span>
   </div>
   <nav class="nav">
@@ -292,7 +292,7 @@ title: The Vader Doctrine
     <h2>The Doctrine, in action</h2>
   </div>
   <div class="frame">
-    <img src="/dvader/demo-1.gif" alt="The Doctrine in action &mdash; a live compressed turn">
+    <img src="./demo-1.gif" alt="The Doctrine in action &mdash; a live compressed turn">
   </div>
   <figcaption><b>One agent turn</b> &middot; filtered &middot; structured &middot; zero filler</figcaption>
 </section>
@@ -330,14 +330,16 @@ title: The Vader Doctrine
 </footer>
 
 <script>
-  document.querySelectorAll('.copy').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var t = btn.dataset.cmd;
-      navigator.clipboard.writeText(t).then(function () {
-        var old = btn.textContent;
-        btn.textContent = 'copied';
-        setTimeout(function () { btn.textContent = old; }, 1400);
+  if (typeof document !== 'undefined') {
+    document.querySelectorAll('.copy').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var t = btn.dataset.cmd;
+        navigator.clipboard.writeText(t).then(function () {
+          var old = btn.textContent;
+          btn.textContent = 'copied';
+          setTimeout(function () { btn.textContent = old; }, 1400);
+        });
       });
     });
-  });
+  }
 </script>

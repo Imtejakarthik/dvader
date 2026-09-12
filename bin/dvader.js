@@ -102,7 +102,7 @@ function remove(args) {
 
 function help() {
   console.log(`dvader-skills ${VERSION} — The Breath installer
-Installs the 6 dvader skill folders into agent skill directories.
+Installs the 8 dvader skill folders into agent skill directories.
 
 Usage: npx dvader-skills <command> [options]
 

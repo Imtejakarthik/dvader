@@ -4,9 +4,9 @@ const assert = require('node:assert/strict');
 const path = require('node:path');
 const { listSkills, agentTargets, parseArgs, resolveTargets, SKILLS_DIR } = require('../bin/dvader.js');
 
-const EXPECTED = ['dvader', 'dvader-build', 'dvader-do', 'dvader-help', 'dvader-short', 'dvader-verify'];
+const EXPECTED = ['dvader', 'dvader-build', 'dvader-do', 'dvader-help', 'dvader-hunt', 'dvader-review', 'dvader-short', 'dvader-verify'];
 
-test('bundles exactly the 6 dvader skills', () => {
+test('bundles exactly the 8 dvader skills', () => {
   assert.deepEqual(listSkills(), EXPECTED);
 });
 

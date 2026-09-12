@@ -52,7 +52,7 @@ What never changes: code blocks, function names, API names, CLI commands, paths,
 npm run bench:tokens
 ```
 
-Current public fixture average: 74% fewer rough output tokens.
+Current fixture average: 81% fewer rough output tokens. GPT-tokenizer check: 73% fewer tokens.
 
 ## Turn It Off
 

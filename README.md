@@ -1,4 +1,4 @@
-**dvader-skills** · [![npm](https://img.shields.io/badge/npm-dvader--skills-1.4.0-blue?logo=npm)](https://www.npmjs.com/package/dvader-skills) [![license](https://img.shields.io/badge/license-MIT-green)](LICENSE) [![node](https://img.shields.io/badge/node-%3E%3D16.17-brightgreen)]() [![skills](https://img.shields.io/badge/skills-18-orange)](https://github.com/Imtejakarthik/dvader/tree/main/skills) [![benchmark](https://img.shields.io/badge/benchmark-81%25%20rough-red)](benchmarks/README.md)
+**dvader-skills** · [![npm](https://img.shields.io/badge/npm-dvader--skills-1.4.2-blue?logo=npm)](https://www.npmjs.com/package/dvader-skills) [![license](https://img.shields.io/badge/license-MIT-green)](LICENSE) [![node](https://img.shields.io/badge/node-%3E%3D16.17-brightgreen)]() [![skills](https://img.shields.io/badge/skills-18-orange)](https://github.com/Imtejakarthik/dvader/tree/main/skills) [![benchmark](https://img.shields.io/badge/benchmark-81%25%20rough-red)](benchmarks/README.md)
 
 # Dvader Skills
 

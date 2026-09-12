@@ -27,12 +27,12 @@ Current result:
 
 | Metric | Normal | Dvader | Saved |
 |---|---:|---:|---:|
-| Benchmark total | 434 | 113 | 74% |
+| Benchmark total | 685 | 183 | 73% |
 
 The test is intentionally conservative:
 
 - It uses whitespace token estimates, not model tokenizer internals.
-- It checks ten representative report-style replies.
+- It checks 16 representative report-style replies.
 - It does not claim billing savings.
 - It does not claim every answer compresses equally.
 

@@ -36,6 +36,7 @@
   "scripts": {
     "test": "node --test test/*.js",
     "bench:tokens": "node benchmarks/run.js",
+    "bench:update": "node benchmarks/generate-readme-section.js",
     "test:bench": "node --test test/token-savings.test.js"
   },
   "homepage": "https://imtejakarthik.github.io/dvader/",

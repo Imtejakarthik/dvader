@@ -48,5 +48,35 @@
     "task": "Done report",
     "normal": "I updated the installer test command so Node runs the JavaScript test files directly. The previous command attempted to execute the test directory as a module and failed before loading the tests. The package test suite now passes.",
     "dvader": "Work done. Test glob fixed. Directory no execute. Suite passes."
+  },
+  {
+    "task": "TypeScript narrowing bug",
+    "normal": "The TypeScript error happens because the guard only proves that payload exists, not that payload.user has the id field your code reads later. Add a specific guard for payload.user.id before accessing it, or normalize the payload into a typed object at the boundary.",
+    "dvader": "Guard too weak. Prove `payload.user.id`, or normalize at boundary."
+  },
+  {
+    "task": "API pagination fix",
+    "normal": "The API endpoint drops the final page because the loop stops when the current response length is below the limit before appending that response to the accumulator. Append the page first, then decide whether another request is needed from the next cursor.",
+    "dvader": "Final page lost. Append first. Then check cursor/limit for next fetch."
+  },
+  {
+    "task": "Cache invalidation report",
+    "normal": "The stale dashboard values come from invalidating only the organization cache key after a settings update. The dashboard also reads a derived project summary key. Invalidate both keys in the same mutation path and add a regression test for the summary view.",
+    "dvader": "Stale key remains. Invalidate org key and project summary key. Add summary-view test."
+  },
+  {
+    "task": "CLI error handling",
+    "normal": "The CLI currently prints a stack trace for expected validation failures, which makes a normal user error look like a crash. Catch validation errors at the command boundary, print the concise message with the invalid flag name, and exit with code two.",
+    "dvader": "Expected validation shows stack. Catch at command edge. Print flag error. Exit 2."
+  },
+  {
+    "task": "Accessibility review",
+    "normal": "The modal can trap keyboard users because focus moves into the dialog but the escape key and close button do not restore focus to the opener. Store the opener before opening, restore it after close, and cover the escape path in a browser test.",
+    "dvader": "Modal focus lost. Store opener. Restore on close. Test escape path."
+  },
+  {
+    "task": "Release checklist",
+    "normal": "Before publishing the package, run the unit tests, the token benchmark, the documentation build, and a dry-run package preview. Confirm the package version, repository URL, license, and files list match the release branch before running the publish command.",
+    "dvader": "Before publish: test, bench, docs build, dry-run pack. Check version, repo, license, files."
   }
 ]

@@ -4,6 +4,7 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const samples = require('./fixtures/token-samples.json');
 const benchmarkSamples = require('../benchmarks/output-token-benchmark.json');
+const { benchmarkRows, totals } = require('../benchmarks/lib/render-table');
 
 function roughTokens(text) {
   return text.trim().split(/\s+/).length;
@@ -19,14 +20,14 @@ test('dvader fixtures reduce rough output tokens', () => {
 });
 
 test('public benchmark stays above the savings guardrail', () => {
-  let normalTotal = 0;
-  let dvaderTotal = 0;
+  const rows = benchmarkRows(benchmarkSamples);
+  const total = totals(rows);
 
-  for (const sample of benchmarkSamples) {
-    normalTotal += roughTokens(sample.normal);
-    dvaderTotal += roughTokens(sample.dvader);
+  assert.ok(rows.length >= 16, `benchmark has only ${rows.length} fixtures`);
+
+  for (const row of rows) {
+    assert.ok(row.saved > 0.45, `${row.task} saved only ${Math.round(row.saved * 100)}%`);
   }
 
-  const saved = 1 - dvaderTotal / normalTotal;
-  assert.ok(saved > 0.66, `benchmark saved only ${Math.round(saved * 100)}%`);
+  assert.ok(total.saved > 0.72, `benchmark saved only ${Math.round(total.saved * 100)}%`);
 });
